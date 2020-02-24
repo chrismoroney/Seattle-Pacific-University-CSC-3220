@@ -35,11 +35,13 @@ multiFunctionalDashBoard::~multiFunctionalDashBoard()
 
 void multiFunctionalDashBoard::setCurrentTime()
 {
+    /*
     photoTimer++;
     if(photoTimer>10){
         // change picture
         photoTimer =0;
     }
+    */
     QTime time = QTime::currentTime();
     QString hour = time.toString("hh");
     QString minute = time.toString("mm");
