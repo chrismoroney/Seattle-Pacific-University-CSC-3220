@@ -188,6 +188,7 @@ void multiFunctionalDashBoard::processWeatherJson(QJsonObject *json)
     ui->tempHiLabel->setText("HI: " + QString::number(temp_max) + " F");
     ui->tempLowLabel->setText("LO: " + QString::number(temp_min) + " F");
     ui->weatherLabel->setText(weather);
+    ui->humidityLabel->setText("Humidity: " + QString::number(humidity) + " g");
 
     /*
      * {

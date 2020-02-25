@@ -1,4 +1,4 @@
- #include "httpmanager.h"
+#include "httpmanager.h"
 #include <QPixmap>
 #include <QJsonDocument>
 #include <QJsonObject>
