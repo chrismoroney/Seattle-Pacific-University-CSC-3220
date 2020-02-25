@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.11.0, 2020-02-23T20:49:38. -->
+<!-- Written by QtCreator 4.11.0, 2020-02-25T01:12:25. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -285,8 +285,9 @@
     </valuelist>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/Users/chrismoroney/Desktop/Seattle Pacific University/CSC3220/multiFunctionalDashBoard/multiFunctionalDashBoard.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/Users/chrismoroney/Desktop/Seattle Pacific University/CSC3220/multiFunctionalDashBoard/multiFunctionalDashBoard.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">multiFunctionalDashBoard2</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/Users/chrismoroney/Documents/GitHub/Seattle-Pacific-University-CSC-3220/DashboardApp/multiFunctionalDashBoard.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/Users/chrismoroney/Documents/GitHub/Seattle-Pacific-University-CSC-3220/DashboardApp/multiFunctionalDashBoard.pro</value>
     <value type="QString" key="RunConfiguration.Arguments"></value>
     <value type="bool" key="RunConfiguration.Arguments.multi">false</value>
     <value type="QString" key="RunConfiguration.OverrideDebuggerStartup"></value>

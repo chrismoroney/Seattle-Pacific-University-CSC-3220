@@ -26,6 +26,17 @@ multiFunctionalDashBoard::multiFunctionalDashBoard(QWidget *parent)
 
     connect(httpManager, SIGNAL(WeatherIconReady(QPixmap *)),
             this, SLOT(processWeatherIcon(QPixmap *)));
+
+    loadBackgroundImage();
+    loadImage1();
+    loadImage2();
+    loadImage3();
+    loadImage4();
+    loadImage5();
+    loadImage6();
+
+    ui->backgroundLabel->setPixmap(background);
+
 }
 
 multiFunctionalDashBoard::~multiFunctionalDashBoard()
@@ -42,6 +53,8 @@ void multiFunctionalDashBoard::setCurrentTime()
         photoTimer =0;
     }
     */
+    //ui->photoSlide->setPixmap(image1);
+
     QTime time = QTime::currentTime();
     QString hour = time.toString("hh");
     QString minute = time.toString("mm");
@@ -50,8 +63,104 @@ void multiFunctionalDashBoard::setCurrentTime()
     ui->hourLCD->display(hour);
     ui->minuteLCD->display(minute);
     ui->secondLCD->display(second);
+
+    picTimer = second.toInt();
+    initialPicSwitch = 0;
+    picTimerSwitch = 10;
+    picTimerSwitch1 = 20;
+    picTimerSwitch2 = 30;
+    picTimerSwitch3 = 40;
+    picTimerSwitch4 = 50;
+
+        // change pic
+    if (picTimer == initialPicSwitch)
+    {
+        ui->photoSlide->setPixmap(image1);
+    }
+    else if (picTimer == picTimerSwitch)
+    {
+        ui->photoSlide->setPixmap(image2);
+    }
+    else if (picTimer == picTimerSwitch1)
+    {
+        ui->photoSlide->setPixmap(image3);
+    }
+    else if (picTimer == picTimerSwitch2)
+    {
+        ui->photoSlide->setPixmap(image4);
+    }
+    else if (picTimer == picTimerSwitch3)
+    {
+        ui->photoSlide->setPixmap(image5);
+    }
+    else if (picTimer == picTimerSwitch4)
+    {
+        ui->photoSlide->setPixmap(image6);
+    }
 }
 
+void multiFunctionalDashBoard::loadBackgroundImage()
+{
+    QString back = ":/White.jpg";
+    if(background.load(back))
+    {
+        background = background.scaled(ui->backgroundLabel->size(), Qt::KeepAspectRatioByExpanding);
+    }
+}
+
+void multiFunctionalDashBoard::loadImage1()
+{
+    QString back = ":/a3b1b655-bbec-437a-a622-d8f8af94db44.jpg";
+    if(image1.load(back))
+    {
+        image1 = image1.scaled(ui->photoSlide->size(), Qt::KeepAspectRatioByExpanding);
+    }
+}
+
+void multiFunctionalDashBoard::loadImage2()
+{
+    QString back = ":/DSC_0027-2.jpg";
+    if(image2.load(back))
+    {
+        image2 = image2.scaled(ui->photoSlide->size(), Qt::KeepAspectRatioByExpanding);
+    }
+}
+
+void multiFunctionalDashBoard::loadImage3()
+{
+    QString back = ":/Headshot LinkedIn.jpg";
+    if(image3.load(back))
+    {
+        image3 = image3.scaled(ui->photoSlide->size(), Qt::KeepAspectRatioByExpanding);
+    }
+}
+
+void multiFunctionalDashBoard::loadImage4()
+{
+    QString back = ":/room.jpeg";
+    if(image4.load(back))
+    {
+        image4 = image4.scaled(ui->photoSlide->size(), Qt::KeepAspectRatioByExpanding);
+    }
+}
+
+void multiFunctionalDashBoard::loadImage5()
+{
+    QString back = ":/room4.jpeg";
+    if(image5.load(back))
+    {
+        image5 = image5.scaled(ui->photoSlide->size(), Qt::KeepAspectRatioByExpanding);
+    }
+}
+
+void multiFunctionalDashBoard::loadImage6()
+{
+    QString back = ":/room3.jpeg";
+    if(image6.load(back))
+    {
+        image6 = image6.scaled(ui->photoSlide->size(), Qt::KeepAspectRatioByExpanding);
+    }
+}
 void multiFunctionalDashBoard::processImage(QPixmap *image)
 {
     ui->imageLabel->setPixmap(*image);
@@ -66,7 +175,7 @@ void multiFunctionalDashBoard::processWeatherJson(QJsonObject *json)
 {
     qDebug() << "Json ready";
     QString weather = json->value("weather").toArray()[0].toObject()["main"].toString();
-    QString weatherDesc = json->value("weather").toArray()[0].toObject()["description"].toString();
+    int humidity = json->value("main").toArray()[0].toObject()["humidity"].toInt();
     double temperature = json->value("main").toObject()["temp"].toDouble();
     double temp_min = json->value("main").toObject()["temp_min"].toDouble();
     double temp_max = json->value("main").toObject()["temp_max"].toDouble();
@@ -74,16 +183,11 @@ void multiFunctionalDashBoard::processWeatherJson(QJsonObject *json)
     QString iconCode = json->value("weather").toArray()[0].toObject()["icon"].toString();
     httpManager->sendWeatherIconRequest(iconCode);
 
-    qDebug() << weather;
-    qDebug() << weatherDesc;
-    qDebug() << temperature;
-    qDebug() << temp_min;
-    qDebug() << temp_max;
 
-    ui->weatherLabel->setText("Current Weather: " + weather + ", temp: " + QString::number(temperature));
-    //ui->weatherIcon->setPixmap();
-
-
+    ui->tempLabel->setText(QString::number(temperature) + " F");
+    ui->tempHiLabel->setText("HI: " + QString::number(temp_max) + " F");
+    ui->tempLowLabel->setText("LO: " + QString::number(temp_min) + " F");
+    ui->weatherLabel->setText(weather);
 
     /*
      * {

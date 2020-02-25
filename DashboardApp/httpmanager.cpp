@@ -32,7 +32,7 @@ void HTTPManager::sendImageRequest(QString zip)
     QNetworkRequest request;
     QString address = "https://dev.virtualearth.net/REST/V1/Imagery/Map/Road/"
             + zip
-            + "/4?mapSize=400,200&mapLayer=TrafficFlow&format=png&key=AvK2_Qsi479iNFfB99p9OrYlIOjbFbeBofb71VjrGMN4VJBwJXRLeFVj1VbqF013";
+            + "/4?mapSize=300,350&mapLayer=TrafficFlow&format=png&key=AvK2_Qsi479iNFfB99p9OrYlIOjbFbeBofb71VjrGMN4VJBwJXRLeFVj1VbqF013";
 
     request.setUrl(QUrl(address));
     imageDownloadManager->get(request);

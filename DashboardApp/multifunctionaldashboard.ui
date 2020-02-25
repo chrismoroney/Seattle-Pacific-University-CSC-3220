@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>942</width>
-    <height>616</height>
+    <width>966</width>
+    <height>737</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,8 +19,8 @@
      <rect>
       <x>20</x>
       <y>40</y>
-      <width>141</width>
-      <height>191</height>
+      <width>131</width>
+      <height>91</height>
      </rect>
     </property>
     <property name="digitCount">
@@ -33,10 +33,10 @@
    <widget class="QLCDNumber" name="minuteLCD">
     <property name="geometry">
      <rect>
-      <x>160</x>
+      <x>150</x>
       <y>40</y>
-      <width>141</width>
-      <height>191</height>
+      <width>121</width>
+      <height>91</height>
      </rect>
     </property>
     <property name="digitCount">
@@ -49,10 +49,10 @@
    <widget class="QLCDNumber" name="secondLCD">
     <property name="geometry">
      <rect>
-      <x>300</x>
+      <x>270</x>
       <y>40</y>
-      <width>141</width>
-      <height>191</height>
+      <width>121</width>
+      <height>91</height>
      </rect>
     </property>
     <property name="digitCount">
@@ -65,36 +65,36 @@
    <widget class="QPushButton" name="imageDownloadDisplay">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>230</y>
-      <width>201</width>
-      <height>71</height>
+      <x>830</x>
+      <y>390</y>
+      <width>111</width>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
-     <string>Image Download/Display</string>
+     <string>View Traffic</string>
     </property>
    </widget>
    <widget class="QLabel" name="imageLabel">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>310</y>
-      <width>421</width>
-      <height>231</height>
+      <x>660</x>
+      <y>10</y>
+      <width>281</width>
+      <height>361</height>
      </rect>
     </property>
     <property name="text">
-     <string>ImageLabel</string>
+     <string/>
     </property>
    </widget>
    <widget class="QLineEdit" name="zipEdit">
     <property name="geometry">
      <rect>
-      <x>220</x>
-      <y>240</y>
+      <x>120</x>
+      <y>130</y>
       <width>113</width>
-      <height>51</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="text">
@@ -104,49 +104,152 @@
    <widget class="QPushButton" name="weatherDownloadButton">
     <property name="geometry">
      <rect>
-      <x>480</x>
-      <y>230</y>
-      <width>201</width>
+      <x>20</x>
+      <y>450</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>View Weather</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="tempLabel">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>530</y>
+      <width>131</width>
       <height>71</height>
      </rect>
     </property>
-    <property name="text">
-     <string>Image Download/Display</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="weatherLabel">
-    <property name="geometry">
-     <rect>
-      <x>480</x>
-      <y>310</y>
-      <width>421</width>
-      <height>231</height>
-     </rect>
+    <property name="font">
+     <font>
+      <pointsize>28</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
     </property>
     <property name="text">
-     <string>ImageLabel</string>
+     <string/>
     </property>
    </widget>
    <widget class="QLabel" name="weatherIcon">
     <property name="geometry">
      <rect>
-      <x>480</x>
-      <y>470</y>
-      <width>171</width>
-      <height>81</height>
+      <x>180</x>
+      <y>540</y>
+      <width>91</width>
+      <height>51</height>
      </rect>
     </property>
     <property name="text">
-     <string>Weather Icon</string>
+     <string/>
     </property>
    </widget>
+   <widget class="QLabel" name="backgroundLabel">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>971</width>
+      <height>721</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="photoSlide">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>190</y>
+      <width>251</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="weatherLabel">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>600</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="tempHiLabel">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>600</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="tempLowLabel">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>620</y>
+      <width>111</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>140</y>
+      <width>101</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Home Zip:</string>
+    </property>
+   </widget>
+   <zorder>backgroundLabel</zorder>
+   <zorder>hourLCD</zorder>
+   <zorder>minuteLCD</zorder>
+   <zorder>secondLCD</zorder>
+   <zorder>imageDownloadDisplay</zorder>
+   <zorder>imageLabel</zorder>
+   <zorder>zipEdit</zorder>
+   <zorder>weatherDownloadButton</zorder>
+   <zorder>tempLabel</zorder>
+   <zorder>weatherIcon</zorder>
+   <zorder>photoSlide</zorder>
+   <zorder>weatherLabel</zorder>
+   <zorder>tempHiLabel</zorder>
+   <zorder>tempLowLabel</zorder>
+   <zorder>label</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>942</width>
+     <width>966</width>
      <height>22</height>
     </rect>
    </property>
