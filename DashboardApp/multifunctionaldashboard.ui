@@ -66,7 +66,7 @@
     <property name="geometry">
      <rect>
       <x>1260</x>
-      <y>390</y>
+      <y>380</y>
       <width>111</width>
       <height>31</height>
      </rect>
@@ -125,7 +125,7 @@
     </property>
     <property name="font">
      <font>
-      <pointsize>28</pointsize>
+      <pointsize>48</pointsize>
       <weight>75</weight>
       <bold>true</bold>
      </font>
@@ -286,6 +286,29 @@
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
+   <widget class="QListView" name="toDoList">
+    <property name="geometry">
+     <rect>
+      <x>1110</x>
+      <y>440</y>
+      <width>256</width>
+      <height>361</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton">
+    <property name="geometry">
+     <rect>
+      <x>1250</x>
+      <y>810</y>
+      <width>113</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>View To-Do</string>
+    </property>
+   </widget>
    <zorder>backgroundLabel</zorder>
    <zorder>hourLCD</zorder>
    <zorder>minuteLCD</zorder>
@@ -304,6 +327,8 @@
    <zorder>humidityLabel</zorder>
    <zorder>timeOfDayMessage</zorder>
    <zorder>encouragementMessage</zorder>
+   <zorder>toDoList</zorder>
+   <zorder>pushButton</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
