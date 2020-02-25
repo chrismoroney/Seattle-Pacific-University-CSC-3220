@@ -4,7 +4,7 @@
 #include <QMainWindow>
 #include <QTimer>
 #include <QTime>
-
+#include <QTimeZone>
 #include "httpmanager.h"
 
 QT_BEGIN_NAMESPACE
@@ -33,6 +33,8 @@ private:
     Ui::multiFunctionalDashBoard *ui;
     QTimer *timer;
     HTTPManager *httpManager;
+
+    int theHour;
 
     int picTimer;
     int initialPicSwitch;

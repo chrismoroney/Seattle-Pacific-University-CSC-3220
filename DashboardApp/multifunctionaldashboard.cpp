@@ -46,14 +46,6 @@ multiFunctionalDashBoard::~multiFunctionalDashBoard()
 
 void multiFunctionalDashBoard::setCurrentTime()
 {
-    /*
-    photoTimer++;
-    if(photoTimer>10){
-        // change picture
-        photoTimer =0;
-    }
-    */
-    //ui->photoSlide->setPixmap(image1);
 
     QTime time = QTime::currentTime();
     QString hour = time.toString("hh");
@@ -63,6 +55,34 @@ void multiFunctionalDashBoard::setCurrentTime()
     ui->hourLCD->display(hour);
     ui->minuteLCD->display(minute);
     ui->secondLCD->display(second);
+
+    theHour = hour.toInt();
+
+    if (4 <= theHour && theHour <= 6)
+    {
+        ui->timeOfDayMessage->setText("Good Morning Christopher!");
+        ui->encouragementMessage->setText("You're normally not up this early, is there anything I can help you with?");
+    }
+    else if (7 <= theHour && theHour <= 11)
+    {
+        ui->timeOfDayMessage->setText("Good Morning Christopher!");
+        ui->encouragementMessage->setText("Rise and Shine, let's be productive today!");
+    }
+    else if (12 <= theHour && theHour <= 16)
+    {
+        ui->timeOfDayMessage->setText("Good Afternoon Christopher!");
+        ui->encouragementMessage->setText("I hope your day is going well, let me know how I can help!");
+    }
+    else if (17 <= theHour && theHour <= 22)
+    {
+        ui->timeOfDayMessage->setText("Good Evening Christopher!");
+        ui->encouragementMessage->setText("How was your day today? I would love to help you however I can!");
+    }
+    else if (23 >= theHour && theHour <= 3)
+    {
+        ui->timeOfDayMessage->setText("Good Evening Christopher!");
+        ui->encouragementMessage->setText("You normally are asleep by now, is there anything I can help you with?");
+    }
 
     picTimer = second.toInt();
     initialPicSwitch = 0;
