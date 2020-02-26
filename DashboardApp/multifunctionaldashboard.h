@@ -31,6 +31,12 @@ private slots:
 
     void on_timeZoneBox_currentIndexChanged(const QString &arg1);
 
+    void on_closeButton_clicked();
+
+    void on_dayButton_clicked();
+
+    void on_nightButton_clicked();
+
 private:
     Ui::multiFunctionalDashBoard *ui;
     QTimer *timer;
@@ -53,11 +59,9 @@ private:
     QPixmap image4;
     QPixmap image5;
     QPixmap image6;
-    QPixmap background;
 
     QTimeZone timeZone = QDateTime::currentDateTime().timeZone();
 
-    void loadBackgroundImage();
     void loadImage1();
     void loadImage2();
     void loadImage3();

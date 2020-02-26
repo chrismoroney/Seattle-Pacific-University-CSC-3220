@@ -28,7 +28,6 @@ multiFunctionalDashBoard::multiFunctionalDashBoard(QWidget *parent)
     connect(httpManager, SIGNAL(WeatherIconReady(QPixmap *)),
             this, SLOT(processWeatherIcon(QPixmap *)));
 
-    loadBackgroundImage();
     loadImage1();
     loadImage2();
     loadImage3();
@@ -36,7 +35,11 @@ multiFunctionalDashBoard::multiFunctionalDashBoard(QWidget *parent)
     loadImage5();
     loadImage6();
 
-    ui->backgroundLabel->setPixmap(background);
+    ui->closeButton->setStyleSheet("background-color: rgb(249, 119, 119); color: rgb(0, 0, 0)");
+    ui->imageDownloadDisplay->setStyleSheet("background-color: rgb(125, 175, 255); color: rgb(0, 0, 0)");
+    ui->weatherDownloadButton->setStyleSheet("background-color: rgb(3, 180, 23); color: rgb(0, 0, 0)");
+    ui->dayButton->setStyleSheet("background-color: rgb(235, 207, 52); color: rgb(0, 0, 0)");
+    ui->nightButton->setStyleSheet("background-color: rgb(82, 82, 82); color rgb(0, 0, 0)");
 
     QList<QByteArray> allTimes = QTimeZone::availableTimeZoneIds();
     QString timeZoneStr;
@@ -46,6 +49,9 @@ multiFunctionalDashBoard::multiFunctionalDashBoard(QWidget *parent)
         timeZoneStr = allTimes[i];
         ui->timeZoneBox->addItem(timeZoneStr);
     }
+
+    ui->backgroundLabel->setStyleSheet("background-color: rgb(255, 255, 255)");
+
 
 }
 
@@ -81,6 +87,7 @@ void multiFunctionalDashBoard::setCurrentTime()
 
     if (4 <= theHour && theHour <= 6)
     {
+        ui->backgroundLabel->setStyleSheet("background-color: rgb(82, 82, 82)");
         ui->timeOfDayMessage->setText("Good Morning Christopher!");
         ui->encouragementMessage->setText("You're normally not up this early, is there anything I can help you with?");
     }
@@ -96,11 +103,13 @@ void multiFunctionalDashBoard::setCurrentTime()
     }
     else if (17 <= theHour && theHour <= 22)
     {
+        ui->backgroundLabel->setStyleSheet("background-color: rgb(82, 82, 82)");
         ui->timeOfDayMessage->setText("Good Evening Christopher!");
         ui->encouragementMessage->setText("How was your day today? I would love to help you however I can!");
     }
     else if (23 >= theHour && theHour <= 3)
     {
+        ui->backgroundLabel->setStyleSheet("background-color: rgb(82, 82, 82)");
         ui->timeOfDayMessage->setText("Good Evening Christopher!");
         ui->encouragementMessage->setText("You normally are asleep by now, is there anything I can help you with?");
     }
@@ -139,15 +148,6 @@ void multiFunctionalDashBoard::setCurrentTime()
         ui->photoSlide->setPixmap(image6);
     }
 
-}
-
-void multiFunctionalDashBoard::loadBackgroundImage()
-{
-    QString back = ":/White.jpg";
-    if(background.load(back))
-    {
-        background = background.scaled(ui->backgroundLabel->size(), Qt::KeepAspectRatioByExpanding);
-    }
 }
 
 void multiFunctionalDashBoard::loadImage1()
@@ -266,4 +266,19 @@ void multiFunctionalDashBoard::on_timeZoneBox_currentIndexChanged(const QString 
 {
     QByteArray strToByte = arg1.toUtf8();
     timeZone = QTimeZone(strToByte);
+}
+
+void multiFunctionalDashBoard::on_closeButton_clicked()
+{
+    QApplication::quit();
+}
+
+void multiFunctionalDashBoard::on_dayButton_clicked()
+{
+    ui->backgroundLabel->setStyleSheet("background-color: rgb(255, 255, 255)");
+}
+
+void multiFunctionalDashBoard::on_nightButton_clicked()
+{
+    ui->backgroundLabel->setStyleSheet("background-color: rgb(145, 145, 145)");
 }
