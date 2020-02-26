@@ -3,6 +3,7 @@
 
 #include <QJsonObject>
 #include <QJsonArray>
+#include <QTimeZone>
 
 multiFunctionalDashBoard::multiFunctionalDashBoard(QWidget *parent)
     : QMainWindow(parent)
@@ -37,6 +38,15 @@ multiFunctionalDashBoard::multiFunctionalDashBoard(QWidget *parent)
 
     ui->backgroundLabel->setPixmap(background);
 
+    QList<QByteArray> allTimes = QTimeZone::availableTimeZoneIds();
+    QString timeZoneStr;
+
+    for (int i = 0; i < allTimes.size(); i++)
+    {
+        timeZoneStr = allTimes[i];
+        ui->timeZoneBox->addItem(timeZoneStr);
+    }
+
 }
 
 multiFunctionalDashBoard::~multiFunctionalDashBoard()
@@ -46,8 +56,8 @@ multiFunctionalDashBoard::~multiFunctionalDashBoard()
 
 void multiFunctionalDashBoard::setCurrentTime()
 {
-
     QTime time = QTime::currentTime();
+
     QString hour = time.toString("hh");
     QString minute = time.toString("mm");
     QString second = time.toString("ss");
@@ -55,6 +65,17 @@ void multiFunctionalDashBoard::setCurrentTime()
     ui->hourLCD->display(hour);
     ui->minuteLCD->display(minute);
     ui->secondLCD->display(second);
+
+    QDateTime timeInDiffPlace = QDateTime::currentDateTimeUtc();
+    QTime theTimeNewDiffPlace = timeInDiffPlace.toTimeZone(timeZone).time();
+
+    QString hour1 = theTimeNewDiffPlace.toString("hh");
+    QString minute1 = theTimeNewDiffPlace.toString("mm");
+    QString second1 = theTimeNewDiffPlace.toString("ss");
+
+    ui->hourTimeZone->display(hour1);
+    ui->minuteTimeZone->display(minute1);
+    ui->secondTimeZone->display(second1);
 
     theHour = hour.toInt();
 
@@ -117,6 +138,7 @@ void multiFunctionalDashBoard::setCurrentTime()
     {
         ui->photoSlide->setPixmap(image6);
     }
+
 }
 
 void multiFunctionalDashBoard::loadBackgroundImage()
@@ -238,4 +260,10 @@ void multiFunctionalDashBoard::on_weatherDownloadButton_clicked()
     qDebug() << zip;
     httpManager->sendWeatherRequest(zip);
 
+}
+
+void multiFunctionalDashBoard::on_timeZoneBox_currentIndexChanged(const QString &arg1)
+{
+    QByteArray strToByte = arg1.toUtf8();
+    timeZone = QTimeZone(strToByte);
 }

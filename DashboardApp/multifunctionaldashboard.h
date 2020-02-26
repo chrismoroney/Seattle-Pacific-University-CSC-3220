@@ -29,6 +29,8 @@ private slots:
 
     void on_weatherDownloadButton_clicked();
 
+    void on_timeZoneBox_currentIndexChanged(const QString &arg1);
+
 private:
     Ui::multiFunctionalDashBoard *ui;
     QTimer *timer;
@@ -52,6 +54,8 @@ private:
     QPixmap image5;
     QPixmap image6;
     QPixmap background;
+
+    QTimeZone timeZone = QDateTime::currentDateTime().timeZone();
 
     void loadBackgroundImage();
     void loadImage1();
