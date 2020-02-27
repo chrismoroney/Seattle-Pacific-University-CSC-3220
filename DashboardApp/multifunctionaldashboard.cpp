@@ -39,7 +39,7 @@ multiFunctionalDashBoard::multiFunctionalDashBoard(QWidget *parent)
     ui->imageDownloadDisplay->setStyleSheet("background-color: rgb(125, 175, 255); color: rgb(0, 0, 0)");
     ui->weatherDownloadButton->setStyleSheet("background-color: rgb(3, 180, 23); color: rgb(0, 0, 0)");
     ui->dayButton->setStyleSheet("background-color: rgb(235, 207, 52); color: rgb(0, 0, 0)");
-    ui->nightButton->setStyleSheet("background-color: rgb(82, 82, 82); color rgb(0, 0, 0)");
+    ui->nightButton->setStyleSheet("background-color: rgb(82, 82, 82); color: rgb(255, 255, 255)");
 
     QList<QByteArray> allTimes = QTimeZone::availableTimeZoneIds();
     QString timeZoneStr;
