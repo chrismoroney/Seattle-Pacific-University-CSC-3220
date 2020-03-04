@@ -667,7 +667,7 @@
      <string>Drop Piece</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_8">
+   <widget class="QPushButton" name="instructionsButton">
     <property name="geometry">
      <rect>
       <x>870</x>

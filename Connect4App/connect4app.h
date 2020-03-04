@@ -15,6 +15,9 @@ public:
     connect4App(QWidget *parent = nullptr);
     ~connect4App();
 
+private slots:
+    void on_instructionsButton_clicked();
+
 private:
     Ui::connect4App *ui;
 };
