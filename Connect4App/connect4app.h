@@ -20,11 +20,25 @@ private slots:
 
     void on_firstColButton_clicked();
 
+    void on_secondColButton_clicked();
+
+    void on_thirdColButton_clicked();
+
+    void on_fourthColButton_clicked();
+
+    void on_fifthColButton_clicked();
+
+    void on_sixthButtonCol_clicked();
+
+    void on_seventhColButton_clicked();
+
 private:
     Ui::connect4App *ui;
 
     QColor currentColor;
     QColor color1;
     QColor color2;
+
+    int numClicks = -1;
 };
 #endif // CONNECT4APP_H
