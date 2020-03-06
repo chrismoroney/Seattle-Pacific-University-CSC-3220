@@ -18,7 +18,13 @@ public:
 private slots:
     void on_instructionsButton_clicked();
 
+    void on_firstColButton_clicked();
+
 private:
     Ui::connect4App *ui;
+
+    QColor currentColor;
+    QColor color1;
+    QColor color2;
 };
 #endif // CONNECT4APP_H

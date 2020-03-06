@@ -576,7 +576,7 @@
      </property>
     </widget>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="firstColButton">
     <property name="geometry">
      <rect>
       <x>120</x>
@@ -589,7 +589,7 @@
      <string>Drop Piece</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="secondColButton">
     <property name="geometry">
      <rect>
       <x>210</x>
@@ -602,7 +602,7 @@
      <string>Drop Piece</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="thirdColButton">
     <property name="geometry">
      <rect>
       <x>310</x>
@@ -615,7 +615,7 @@
      <string>Drop Piece</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="fourthColButton">
     <property name="geometry">
      <rect>
       <x>410</x>
@@ -628,7 +628,7 @@
      <string>Drop Piece</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_5">
+   <widget class="QPushButton" name="fifthColButton">
     <property name="geometry">
      <rect>
       <x>510</x>
@@ -641,7 +641,7 @@
      <string>Drop Piece</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_6">
+   <widget class="QPushButton" name="sixthButtonCol">
     <property name="geometry">
      <rect>
       <x>600</x>
@@ -654,7 +654,7 @@
      <string>Drop Piece</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_7">
+   <widget class="QPushButton" name="seventhColButton">
     <property name="geometry">
      <rect>
       <x>700</x>

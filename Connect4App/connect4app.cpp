@@ -8,6 +8,11 @@ connect4App::connect4App(QWidget *parent)
     , ui(new Ui::connect4App)
 {
     ui->setupUi(this);
+
+    QColor color1 = {255, 0, 0};
+    QColor color2 = {0, 255, 255};
+
+    QColor currentColor = color1;
 }
 
 connect4App::~connect4App()
@@ -25,4 +30,22 @@ void connect4App::on_instructionsButton_clicked()
                          "Good luck and have fun!!");
     instructions.setWindowTitle("How to Play:");
     instructions.exec();
+}
+
+
+void connect4App::on_firstColButton_clicked()
+{
+    if (ui->space_1_6->text() != "")
+    {
+        ui->space_1_6->setText("");
+        if (currentColor == color1)
+        {
+            ui->space_1_6->setStyleSheet("background-color: rgb(255, 0, 0);");
+        }
+        else
+        {
+            ui->space_1_6->setStyleSheet("background-color: rgb(0, 255, 255);");
+        }
+
+    }
 }
