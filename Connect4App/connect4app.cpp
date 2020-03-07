@@ -2,6 +2,7 @@
 #include "ui_connect4app.h"
 
 #include <QMessageBox>
+#include <QDebug>
 
 connect4App::connect4App(QWidget *parent)
     : QMainWindow(parent)
@@ -47,6 +48,18 @@ connect4App::connect4App(QWidget *parent)
     ui->maroonButton_2->setStyleSheet("background-color: rgb(153, 24, 24)");
     ui->darkGreenButton_2->setStyleSheet("background-color: rgb(34, 107, 17)");
     ui->darkMagButton_2->setStyleSheet("background-color: rgb(128, 13, 112)");
+    spaces = QList<QList<QLabel*>*>({
+                                      new QList<QLabel*>({ui->space_1_6, ui->space_1_5, ui->space_1_4, ui->space_1_3, ui->space_1_2, ui->space_1_1}),
+                                      new QList<QLabel*>({ui->space_2_6, ui->space_2_5, ui->space_2_4, ui->space_2_3, ui->space_2_2, ui->space_2_1}),
+                                      new QList<QLabel*>({ui->space_3_6, ui->space_3_5, ui->space_3_4, ui->space_3_3, ui->space_3_2, ui->space_3_1}),
+                                      new QList<QLabel*>({ui->space_4_6, ui->space_4_5, ui->space_4_4, ui->space_4_3, ui->space_4_2, ui->space_4_1}),
+                                      new QList<QLabel*>({ui->space_5_6, ui->space_5_5, ui->space_5_4, ui->space_5_3, ui->space_5_2, ui->space_5_1}),
+                                      new QList<QLabel*>({ui->space_6_6, ui->space_6_5, ui->space_6_4, ui->space_6_3, ui->space_6_2, ui->space_6_1}),
+                                      new QList<QLabel*>({ui->space_7_6, ui->space_7_5, ui->space_7_4, ui->space_7_3, ui->space_7_2, ui->space_7_1}),
+                                  });
+
+    QColor color1 = {255, 0, 0};
+    QColor color2 = {0, 255, 255};
 
 }
 
@@ -67,593 +80,64 @@ void connect4App::on_instructionsButton_clicked()
     instructions.exec();
 }
 
+void connect4App::play(int columnNumber){
 
-void connect4App::on_firstColButton_clicked()
-{
-    if (ui->space_1_1->text() == "")
+    QList<QLabel*>* columnSpaces = spaces.at(columnNumber - 1);
+
+    if (columnSpaces->empty())
     {
         QMessageBox invalidMove;
         invalidMove.setText("This Column is full! Please select another column.");
         invalidMove.setWindowTitle("Invalid Move");
         invalidMove.exec();
-    }
-    else
-    {
-        numClicks++;
+        return;
     }
 
-    if (numClicks % 2 == 0)
-    {
-        ui->player_label->setText("Player 2 turn");
-        if (ui->space_1_6->text() != "")
-        {
-            ui->space_1_6->setText("");
-            ui->space_1_6->setStyleSheet("background-color: rgb(255, 0, 0);");
-        }
-        else if (ui->space_1_5->text() != "")
-        {
-            ui->space_1_5->setText("");
-            ui->space_1_5->setStyleSheet("background-color: rgb(255, 0, 0);");
-        }
-        else if (ui->space_1_4->text() != "")
-        {
-            ui->space_1_4->setText("");
-            ui->space_1_4->setStyleSheet("background-color: rgb(255, 0, 0);");
-        }
-        else if (ui->space_1_3->text() != "")
-        {
-            ui->space_1_3->setText("");
-            ui->space_1_3->setStyleSheet("background-color: rgb(255, 0, 0);");
-        }
-        else if (ui->space_1_2->text() != "")
-        {
-            ui->space_1_2->setText("");
-            ui->space_1_2->setStyleSheet("background-color: rgb(255, 0, 0);");
-        }
-        else if (ui->space_1_1->text() != "")
-        {
-            ui->space_1_1->setText("");
-            ui->space_1_1->setStyleSheet("background-color: rgb(255, 0, 0);");
-        }
-    }
-    else
-    {
-        ui->player_label->setText("Player 1 turn");
-        if (ui->space_1_6->text() != "")
-        {
-            ui->space_1_6->setText("");
-            ui->space_1_6->setStyleSheet("background-color: rgb(255, 253, 107);");
-        }
-        else if (ui->space_1_5->text() != "")
-        {
-            ui->space_1_5->setText("");
-            ui->space_1_5->setStyleSheet("background-color: rgb(255, 253, 107);");
-        }
-        else if (ui->space_1_4->text() != "")
-        {
-            ui->space_1_4->setText("");
-            ui->space_1_4->setStyleSheet("background-color: rgb(255, 253, 107);");
-        }
-        else if (ui->space_1_3->text() != "")
-        {
-            ui->space_1_3->setText("");
-            ui->space_1_3->setStyleSheet("background-color: rgb(255, 253, 107);");
-        }
-        else if (ui->space_1_2->text() != "")
-        {
-            ui->space_1_2->setText("");
-            ui->space_1_2->setStyleSheet("background-color: rgb(255, 253, 107);");
-        }
-        else if (ui->space_1_1->text() != "")
-        {
-            ui->space_1_1->setText("");
-            ui->space_1_1->setStyleSheet("background-color: rgb(255, 253, 107);");
-        }
-    }
+    numClicks++;
+
+    QString stylesheet = numClicks % 2 == 0 ? "background-color: rgb(255, 0, 0);" : "background-color: rgb(255, 253, 107);";
+    QLabel* space = columnSpaces->takeFirst();
+
+    space->setText("");
+    space->setStyleSheet(stylesheet);
+
+    QString nextPlayer = numClicks % 2 == 0 ? "Go Player 2" : "Go Player 1";
+    ui->playerLabel->setText(nextPlayer);
+
+}
+void connect4App::on_firstColButton_clicked()
+{
+    play(1);
 }
 
 void connect4App::on_secondColButton_clicked()
 {
-    if (ui->space_2_1->text() == "")
-    {
-        QMessageBox invalidMove;
-        invalidMove.setText("This Column is full! Please select another column.");
-        invalidMove.setWindowTitle("Invalid Move");
-        invalidMove.exec();
-    }
-    else
-    {
-        numClicks++;
-    }
-
-    if (numClicks % 2 == 0)
-    {
-        ui->player_label->setText("Player 2 turn");
-        if (ui->space_2_6->text() != "")
-        {
-            ui->space_2_6->setText("");
-            ui->space_2_6->setStyleSheet("background-color: rgb(255, 0, 0);");
-        }
-        else if (ui->space_2_5->text() != "")
-        {
-            ui->space_2_5->setText("");
-            ui->space_2_5->setStyleSheet("background-color: rgb(255, 0, 0);");
-        }
-        else if (ui->space_2_4->text() != "")
-        {
-            ui->space_2_4->setText("");
-            ui->space_2_4->setStyleSheet("background-color: rgb(255, 0, 0);");
-        }
-        else if (ui->space_2_3->text() != "")
-        {
-            ui->space_2_3->setText("");
-            ui->space_2_3->setStyleSheet("background-color: rgb(255, 0, 0);");
-        }
-        else if (ui->space_2_2->text() != "")
-        {
-            ui->space_2_2->setText("");
-            ui->space_2_2->setStyleSheet("background-color: rgb(255, 0, 0);");
-        }
-        else if (ui->space_2_1->text() != "")
-        {
-            ui->space_2_1->setText("");
-            ui->space_2_1->setStyleSheet("background-color: rgb(255, 0, 0);");
-        }
-    }
-    else
-    {
-        ui->player_label->setText("Player 1 turn");
-        if (ui->space_2_6->text() != "")
-        {
-            ui->space_2_6->setText("");
-            ui->space_2_6->setStyleSheet("background-color: rgb(255, 253, 107);");
-        }
-        else if (ui->space_2_5->text() != "")
-        {
-            ui->space_2_5->setText("");
-            ui->space_2_5->setStyleSheet("background-color: rgb(255, 253, 107);");
-        }
-        else if (ui->space_2_4->text() != "")
-        {
-            ui->space_2_4->setText("");
-            ui->space_2_4->setStyleSheet("background-color: rgb(255, 253, 107);");
-        }
-        else if (ui->space_2_3->text() != "")
-        {
-            ui->space_2_3->setText("");
-            ui->space_2_3->setStyleSheet("background-color: rgb(255, 253, 107);");
-        }
-        else if (ui->space_2_2->text() != "")
-        {
-            ui->space_2_2->setText("");
-            ui->space_2_2->setStyleSheet("background-color: rgb(255, 253, 107);");
-        }
-        else if (ui->space_2_1->text() != "")
-        {
-            ui->space_2_1->setText("");
-            ui->space_2_1->setStyleSheet("background-color: rgb(255, 253, 107);");
-        }
-    }
+    play(2);
 }
 
 void connect4App::on_thirdColButton_clicked()
 {
-    if (ui->space_3_1->text() == "")
-    {
-        QMessageBox invalidMove;
-        invalidMove.setText("This Column is full! Please select another column.");
-        invalidMove.setWindowTitle("Invalid Move");
-        invalidMove.exec();
-    }
-    else
-    {
-        numClicks++;
-    }
-
-    if (numClicks % 2 == 0)
-    {
-        ui->player_label->setText("Player 2 turn");
-        if (ui->space_3_6->text() != "")
-        {
-            ui->space_3_6->setText("");
-            ui->space_3_6->setStyleSheet("background-color: rgb(255, 0, 0);");
-        }
-        else if (ui->space_3_5->text() != "")
-        {
-            ui->space_3_5->setText("");
-            ui->space_3_5->setStyleSheet("background-color: rgb(255, 0, 0);");
-        }
-        else if (ui->space_3_4->text() != "")
-        {
-            ui->space_3_4->setText("");
-            ui->space_3_4->setStyleSheet("background-color: rgb(255, 0, 0);");
-        }
-        else if (ui->space_3_3->text() != "")
-        {
-            ui->space_3_3->setText("");
-            ui->space_3_3->setStyleSheet("background-color: rgb(255, 0, 0);");
-        }
-        else if (ui->space_3_2->text() != "")
-        {
-            ui->space_3_2->setText("");
-            ui->space_3_2->setStyleSheet("background-color: rgb(255, 0, 0);");
-        }
-        else if (ui->space_3_1->text() != "")
-        {
-            ui->space_3_1->setText("");
-            ui->space_3_1->setStyleSheet("background-color: rgb(255, 0, 0);");
-        }
-    }
-    else
-    {
-        ui->player_label->setText("Player 1 turn");
-        if (ui->space_3_6->text() != "")
-        {
-            ui->space_3_6->setText("");
-            ui->space_3_6->setStyleSheet("background-color: rgb(255, 253, 107);");
-        }
-        else if (ui->space_3_5->text() != "")
-        {
-            ui->space_3_5->setText("");
-            ui->space_3_5->setStyleSheet("background-color: rgb(255, 253, 107);");
-        }
-        else if (ui->space_3_4->text() != "")
-        {
-            ui->space_3_4->setText("");
-            ui->space_3_4->setStyleSheet("background-color: rgb(255, 253, 107);");
-        }
-        else if (ui->space_3_3->text() != "")
-        {
-            ui->space_3_3->setText("");
-            ui->space_3_3->setStyleSheet("background-color: rgb(255, 253, 107);");
-        }
-        else if (ui->space_3_2->text() != "")
-        {
-            ui->space_3_2->setText("");
-            ui->space_3_2->setStyleSheet("background-color: rgb(255, 253, 107);");
-        }
-        else if (ui->space_3_1->text() != "")
-        {
-            ui->space_3_1->setText("");
-            ui->space_3_1->setStyleSheet("background-color: rgb(255, 253, 107);");
-        }
-    }
+    play(3);
 }
 
 void connect4App::on_fourthColButton_clicked()
 {
-    if (ui->space_4_1->text() == "")
-    {
-        QMessageBox invalidMove;
-        invalidMove.setText("This Column is full! Please select another column.");
-        invalidMove.setWindowTitle("Invalid Move");
-        invalidMove.exec();
-    }
-    else
-    {
-        numClicks++;
-    }
-
-    if (numClicks % 2 == 0)
-    {
-        ui->player_label->setText("Player 2 turn");
-        if (ui->space_4_6->text() != "")
-        {
-            ui->space_4_6->setText("");
-            ui->space_4_6->setStyleSheet("background-color: rgb(255, 0, 0);");
-        }
-        else if (ui->space_4_5->text() != "")
-        {
-            ui->space_4_5->setText("");
-            ui->space_4_5->setStyleSheet("background-color: rgb(255, 0, 0);");
-        }
-        else if (ui->space_4_4->text() != "")
-        {
-            ui->space_4_4->setText("");
-            ui->space_4_4->setStyleSheet("background-color: rgb(255, 0, 0);");
-        }
-        else if (ui->space_4_3->text() != "")
-        {
-            ui->space_4_3->setText("");
-            ui->space_4_3->setStyleSheet("background-color: rgb(255, 0, 0);");
-        }
-        else if (ui->space_4_2->text() != "")
-        {
-            ui->space_4_2->setText("");
-            ui->space_4_2->setStyleSheet("background-color: rgb(255, 0, 0);");
-        }
-        else if (ui->space_4_1->text() != "")
-        {
-            ui->space_4_1->setText("");
-            ui->space_4_1->setStyleSheet("background-color: rgb(255, 0, 0);");
-        }
-    }
-    else
-    {
-        ui->player_label->setText("Player 1 turn");
-        if (ui->space_4_6->text() != "")
-        {
-            ui->space_4_6->setText("");
-            ui->space_4_6->setStyleSheet("background-color: rgb(255, 253, 107);");
-        }
-        else if (ui->space_4_5->text() != "")
-        {
-            ui->space_4_5->setText("");
-            ui->space_4_5->setStyleSheet("background-color: rgb(255, 253, 107);");
-        }
-        else if (ui->space_4_4->text() != "")
-        {
-            ui->space_4_4->setText("");
-            ui->space_4_4->setStyleSheet("background-color: rgb(255, 253, 107);");
-        }
-        else if (ui->space_4_3->text() != "")
-        {
-            ui->space_4_3->setText("");
-            ui->space_4_3->setStyleSheet("background-color: rgb(255, 253, 107);");
-        }
-        else if (ui->space_4_2->text() != "")
-        {
-            ui->space_4_2->setText("");
-            ui->space_4_2->setStyleSheet("background-color: rgb(255, 253, 107);");
-        }
-        else if (ui->space_4_1->text() != "")
-        {
-            ui->space_4_1->setText("");
-            ui->space_4_1->setStyleSheet("background-color: rgb(255, 253, 107);");
-        }
-    }
+    play(4);
 }
 
 void connect4App::on_fifthColButton_clicked()
 {
-    if (ui->space_5_1->text() == "")
-    {
-        QMessageBox invalidMove;
-        invalidMove.setText("This Column is full! Please select another column.");
-        invalidMove.setWindowTitle("Invalid Move");
-        invalidMove.exec();
-    }
-    else
-    {
-        numClicks++;
-    }
-
-    if (numClicks % 2 == 0)
-    {
-        ui->player_label->setText("Player 2 turn");
-        if (ui->space_5_6->text() != "")
-        {
-            ui->space_5_6->setText("");
-            ui->space_5_6->setStyleSheet("background-color: rgb(255, 0, 0);");
-        }
-        else if (ui->space_5_5->text() != "")
-        {
-            ui->space_5_5->setText("");
-            ui->space_5_5->setStyleSheet("background-color: rgb(255, 0, 0);");
-        }
-        else if (ui->space_5_4->text() != "")
-        {
-            ui->space_5_4->setText("");
-            ui->space_5_4->setStyleSheet("background-color: rgb(255, 0, 0);");
-        }
-        else if (ui->space_5_3->text() != "")
-        {
-            ui->space_5_3->setText("");
-            ui->space_5_3->setStyleSheet("background-color: rgb(255, 0, 0);");
-        }
-        else if (ui->space_5_2->text() != "")
-        {
-            ui->space_5_2->setText("");
-            ui->space_5_2->setStyleSheet("background-color: rgb(255, 0, 0);");
-        }
-        else if (ui->space_5_1->text() != "")
-        {
-            ui->space_5_1->setText("");
-            ui->space_5_1->setStyleSheet("background-color: rgb(255, 0, 0);");
-        }
-    }
-    else
-    {
-        ui->player_label->setText("Player 1 turn");
-        if (ui->space_5_6->text() != "")
-        {
-            ui->space_5_6->setText("");
-            ui->space_5_6->setStyleSheet("background-color: rgb(255, 253, 107);");
-        }
-        else if (ui->space_5_5->text() != "")
-        {
-            ui->space_5_5->setText("");
-            ui->space_5_5->setStyleSheet("background-color: rgb(255, 253, 107);");
-        }
-        else if (ui->space_5_4->text() != "")
-        {
-            ui->space_5_4->setText("");
-            ui->space_5_4->setStyleSheet("background-color: rgb(255, 253, 107);");
-        }
-        else if (ui->space_5_3->text() != "")
-        {
-            ui->space_5_3->setText("");
-            ui->space_5_3->setStyleSheet("background-color: rgb(255, 253, 107);");
-        }
-        else if (ui->space_5_2->text() != "")
-        {
-            ui->space_5_2->setText("");
-            ui->space_5_2->setStyleSheet("background-color: rgb(255, 253, 107);");
-        }
-        else if (ui->space_5_1->text() != "")
-        {
-            ui->space_5_1->setText("");
-            ui->space_5_1->setStyleSheet("background-color: rgb(255, 253, 107);");
-        }
-    }
+    play(5);
 }
 
 void connect4App::on_sixthButtonCol_clicked()
 {
-    if (ui->space_6_1->text() == "")
-    {
-        QMessageBox invalidMove;
-        invalidMove.setText("This Column is full! Please select another column.");
-        invalidMove.setWindowTitle("Invalid Move");
-        invalidMove.exec();
-    }
-    else
-    {
-        numClicks++;
-    }
-
-    if (numClicks % 2 == 0)
-    {
-        ui->player_label->setText("Player 2 turn");
-        if (ui->space_6_6->text() != "")
-        {
-            ui->space_6_6->setText("");
-            ui->space_6_6->setStyleSheet("background-color: rgb(255, 0, 0);");
-        }
-        else if (ui->space_6_5->text() != "")
-        {
-            ui->space_6_5->setText("");
-            ui->space_6_5->setStyleSheet("background-color: rgb(255, 0, 0);");
-        }
-        else if (ui->space_6_4->text() != "")
-        {
-            ui->space_6_4->setText("");
-            ui->space_6_4->setStyleSheet("background-color: rgb(255, 0, 0);");
-        }
-        else if (ui->space_6_3->text() != "")
-        {
-            ui->space_6_3->setText("");
-            ui->space_6_3->setStyleSheet("background-color: rgb(255, 0, 0);");
-        }
-        else if (ui->space_6_2->text() != "")
-        {
-            ui->space_6_2->setText("");
-            ui->space_6_2->setStyleSheet("background-color: rgb(255, 0, 0);");
-        }
-        else if (ui->space_6_1->text() != "")
-        {
-            ui->space_6_1->setText("");
-            ui->space_6_1->setStyleSheet("background-color: rgb(255, 0, 0);");
-        }
-    }
-    else
-    {
-        ui->player_label->setText("Player 1 turn");
-        if (ui->space_6_6->text() != "")
-        {
-            ui->space_6_6->setText("");
-            ui->space_6_6->setStyleSheet("background-color: rgb(255, 253, 107);");
-        }
-        else if (ui->space_6_5->text() != "")
-        {
-            ui->space_6_5->setText("");
-            ui->space_6_5->setStyleSheet("background-color: rgb(255, 253, 107);");
-        }
-        else if (ui->space_6_4->text() != "")
-        {
-            ui->space_6_4->setText("");
-            ui->space_6_4->setStyleSheet("background-color: rgb(255, 253, 107);");
-        }
-        else if (ui->space_6_3->text() != "")
-        {
-            ui->space_6_3->setText("");
-            ui->space_6_3->setStyleSheet("background-color: rgb(255, 253, 107);");
-        }
-        else if (ui->space_6_2->text() != "")
-        {
-            ui->space_6_2->setText("");
-            ui->space_6_2->setStyleSheet("background-color: rgb(255, 253, 107);");
-        }
-        else if (ui->space_6_1->text() != "")
-        {
-            ui->space_6_1->setText("");
-            ui->space_6_1->setStyleSheet("background-color: rgb(255, 253, 107);");
-        }
-    }
+    play(6);
 }
 
 void connect4App::on_seventhColButton_clicked()
 {
-    if (ui->space_7_1->text() == "")
-    {
-        QMessageBox invalidMove;
-        invalidMove.setText("This Column is full! Please select another column.");
-        invalidMove.setWindowTitle("Invalid Move");
-        invalidMove.exec();
-    }
-    else
-    {
-        numClicks++;
-    }
-
-    if (numClicks % 2 == 0)
-    {
-        ui->player_label->setText("Player 2 turn");
-        if (ui->space_7_6->text() != "")
-        {
-            ui->space_7_6->setText("");
-            ui->space_7_6->setStyleSheet("background-color: rgb(255, 0, 0);");
-        }
-        else if (ui->space_7_5->text() != "")
-        {
-            ui->space_7_5->setText("");
-            ui->space_7_5->setStyleSheet("background-color: rgb(255, 0, 0);");
-        }
-        else if (ui->space_7_4->text() != "")
-        {
-            ui->space_7_4->setText("");
-            ui->space_7_4->setStyleSheet("background-color: rgb(255, 0, 0);");
-        }
-        else if (ui->space_7_3->text() != "")
-        {
-            ui->space_7_3->setText("");
-            ui->space_7_3->setStyleSheet("background-color: rgb(255, 0, 0);");
-        }
-        else if (ui->space_7_2->text() != "")
-        {
-            ui->space_7_2->setText("");
-            ui->space_7_2->setStyleSheet("background-color: rgb(255, 0, 0);");
-        }
-        else if (ui->space_7_1->text() != "")
-        {
-            ui->space_7_1->setText("");
-            ui->space_7_1->setStyleSheet("background-color: rgb(255, 0, 0);");
-        }
-    }
-    else
-    {
-        ui->player_label->setText("Player 1 turn");
-        if (ui->space_7_6->text() != "")
-        {
-            ui->space_7_6->setText("");
-            ui->space_7_6->setStyleSheet("background-color: rgb(255, 253, 107);");
-        }
-        else if (ui->space_7_5->text() != "")
-        {
-            ui->space_7_5->setText("");
-            ui->space_7_5->setStyleSheet("background-color: rgb(255, 253, 107);");
-        }
-        else if (ui->space_7_4->text() != "")
-        {
-            ui->space_7_4->setText("");
-            ui->space_7_4->setStyleSheet("background-color: rgb(255, 253, 107);");
-        }
-        else if (ui->space_7_3->text() != "")
-        {
-            ui->space_7_3->setText("");
-            ui->space_7_3->setStyleSheet("background-color: rgb(255, 253, 107);");
-        }
-        else if (ui->space_7_2->text() != "")
-        {
-            ui->space_7_2->setText("");
-            ui->space_7_2->setStyleSheet("background-color: rgb(255, 253, 107);");
-        }
-        else if (ui->space_7_1->text() != "")
-        {
-            ui->space_7_1->setText("");
-            ui->space_7_1->setStyleSheet("background-color: rgb(255, 253, 107);");
-        }
-    }
+    play(7);
 }
 
 void connect4App::on_nextButton_clicked()

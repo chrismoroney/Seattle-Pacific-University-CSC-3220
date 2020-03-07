@@ -2,6 +2,8 @@
 #define CONNECT4APP_H
 
 #include <QMainWindow>
+#include <QLabel>
+#include <QList>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class connect4App; }
@@ -58,5 +60,9 @@ private:
     QColor selectedColor2;
 
     int numClicks = -1;
+
+    QList<QList<QLabel*>*> spaces;
+    void play(int columnNumber);
+
 };
 #endif // CONNECT4APP_H
