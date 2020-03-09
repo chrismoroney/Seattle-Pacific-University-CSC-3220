@@ -48,6 +48,7 @@ void connect4App::on_firstColButton_clicked()
 
     if (numClicks % 2 == 0)
     {
+        ui->player_label->setText("Player 2 turn");
         if (ui->space_1_6->text() != "")
         {
             ui->space_1_6->setText("");
@@ -81,6 +82,7 @@ void connect4App::on_firstColButton_clicked()
     }
     else
     {
+        ui->player_label->setText("Player 1 turn");
         if (ui->space_1_6->text() != "")
         {
             ui->space_1_6->setText("");
@@ -130,6 +132,7 @@ void connect4App::on_secondColButton_clicked()
 
     if (numClicks % 2 == 0)
     {
+        ui->player_label->setText("Player 2 turn");
         if (ui->space_2_6->text() != "")
         {
             ui->space_2_6->setText("");
@@ -163,6 +166,7 @@ void connect4App::on_secondColButton_clicked()
     }
     else
     {
+        ui->player_label->setText("Player 1 turn");
         if (ui->space_2_6->text() != "")
         {
             ui->space_2_6->setText("");
@@ -212,6 +216,7 @@ void connect4App::on_thirdColButton_clicked()
 
     if (numClicks % 2 == 0)
     {
+        ui->player_label->setText("Player 2 turn");
         if (ui->space_3_6->text() != "")
         {
             ui->space_3_6->setText("");
@@ -245,6 +250,7 @@ void connect4App::on_thirdColButton_clicked()
     }
     else
     {
+        ui->player_label->setText("Player 1 turn");
         if (ui->space_3_6->text() != "")
         {
             ui->space_3_6->setText("");
@@ -294,6 +300,7 @@ void connect4App::on_fourthColButton_clicked()
 
     if (numClicks % 2 == 0)
     {
+        ui->player_label->setText("Player 2 turn");
         if (ui->space_4_6->text() != "")
         {
             ui->space_4_6->setText("");
@@ -327,6 +334,7 @@ void connect4App::on_fourthColButton_clicked()
     }
     else
     {
+        ui->player_label->setText("Player 1 turn");
         if (ui->space_4_6->text() != "")
         {
             ui->space_4_6->setText("");
@@ -376,6 +384,7 @@ void connect4App::on_fifthColButton_clicked()
 
     if (numClicks % 2 == 0)
     {
+        ui->player_label->setText("Player 2 turn");
         if (ui->space_5_6->text() != "")
         {
             ui->space_5_6->setText("");
@@ -409,6 +418,7 @@ void connect4App::on_fifthColButton_clicked()
     }
     else
     {
+        ui->player_label->setText("Player 1 turn");
         if (ui->space_5_6->text() != "")
         {
             ui->space_5_6->setText("");
@@ -458,6 +468,7 @@ void connect4App::on_sixthButtonCol_clicked()
 
     if (numClicks % 2 == 0)
     {
+        ui->player_label->setText("Player 2 turn");
         if (ui->space_6_6->text() != "")
         {
             ui->space_6_6->setText("");
@@ -491,6 +502,7 @@ void connect4App::on_sixthButtonCol_clicked()
     }
     else
     {
+        ui->player_label->setText("Player 1 turn");
         if (ui->space_6_6->text() != "")
         {
             ui->space_6_6->setText("");
@@ -540,6 +552,7 @@ void connect4App::on_seventhColButton_clicked()
 
     if (numClicks % 2 == 0)
     {
+        ui->player_label->setText("Player 2 turn");
         if (ui->space_7_6->text() != "")
         {
             ui->space_7_6->setText("");
@@ -573,6 +586,7 @@ void connect4App::on_seventhColButton_clicked()
     }
     else
     {
+        ui->player_label->setText("Player 1 turn");
         if (ui->space_7_6->text() != "")
         {
             ui->space_7_6->setText("");
