@@ -9,8 +9,19 @@ connect4App::connect4App(QWidget *parent)
 {
     ui->setupUi(this);
 
-    QColor color1 = {255, 0, 0};
-    QColor color2 = {0, 255, 255};
+    red = Qt::red;
+    green = Qt::green;
+    cyan = Qt::cyan;
+    blue = Qt::blue;
+    magenta = Qt::magenta;
+    yellow = Qt::yellow;
+    white = Qt::white;
+    black = Qt::black;
+    gold = Qt::darkYellow;
+    maroon = Qt::darkRed;
+    darkGreen = Qt::darkGreen;
+    darkMagenta = Qt::darkMagenta;
+
 
 }
 
@@ -618,4 +629,19 @@ void connect4App::on_seventhColButton_clicked()
             ui->space_7_1->setStyleSheet("background-color: rgb(255, 253, 107);");
         }
     }
+}
+
+void connect4App::on_nextButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(1);
+}
+
+void connect4App::on_nextButton_2_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(2);
+}
+
+void connect4App::on_nextButton_3_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(3);
 }

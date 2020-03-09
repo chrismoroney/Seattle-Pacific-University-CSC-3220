@@ -32,12 +32,30 @@ private slots:
 
     void on_seventhColButton_clicked();
 
+    void on_nextButton_2_clicked();
+
+    void on_nextButton_clicked();
+
+    void on_nextButton_3_clicked();
+
 private:
     Ui::connect4App *ui;
 
-    QColor currentColor;
-    QColor color1;
-    QColor color2;
+    QPalette red;
+    QPalette green;
+    QPalette cyan;
+    QPalette blue;
+    QPalette magenta;
+    QPalette yellow;
+    QPalette white;
+    QPalette black;
+    QPalette gold;
+    QPalette maroon;
+    QPalette darkGreen;
+    QPalette darkMagenta;
+
+    QPalette selectedColor1;
+    QPalette selectedColor2;
 
     int numClicks = -1;
 };
