@@ -62,7 +62,10 @@ private:
     int numClicks = -1;
 
     QList<QList<QLabel*>*> spaces;
+    QList<int> lastRows;
+
     void play(int columnNumber);
+
 
 };
 #endif // CONNECT4APP_H
