@@ -522,7 +522,7 @@ public:
 
         retranslateUi(connect4App);
 
-        stackedWidget->setCurrentIndex(2);
+        stackedWidget->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(connect4App);

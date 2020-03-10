@@ -32,9 +32,9 @@ private slots:
 
     void on_seventhColButton_clicked();
 
-    void on_nextButton_2_clicked();
-
     void on_nextButton_clicked();
+
+    void on_nextButton_2_clicked();
 
     void on_nextButton_3_clicked();
 

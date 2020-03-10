@@ -41,8 +41,8 @@ QT_MOC_LITERAL(6, 122, 26), // "on_fourthColButton_clicked"
 QT_MOC_LITERAL(7, 149, 25), // "on_fifthColButton_clicked"
 QT_MOC_LITERAL(8, 175, 25), // "on_sixthButtonCol_clicked"
 QT_MOC_LITERAL(9, 201, 27), // "on_seventhColButton_clicked"
-QT_MOC_LITERAL(10, 229, 23), // "on_nextButton_2_clicked"
-QT_MOC_LITERAL(11, 253, 21), // "on_nextButton_clicked"
+QT_MOC_LITERAL(10, 229, 21), // "on_nextButton_clicked"
+QT_MOC_LITERAL(11, 251, 23), // "on_nextButton_2_clicked"
 QT_MOC_LITERAL(12, 275, 23) // "on_nextButton_3_clicked"
 
     },
@@ -54,7 +54,7 @@ QT_MOC_LITERAL(12, 275, 23) // "on_nextButton_3_clicked"
     "on_fifthColButton_clicked\0"
     "on_sixthButtonCol_clicked\0"
     "on_seventhColButton_clicked\0"
-    "on_nextButton_2_clicked\0on_nextButton_clicked\0"
+    "on_nextButton_clicked\0on_nextButton_2_clicked\0"
     "on_nextButton_3_clicked"
 };
 #undef QT_MOC_LITERAL
@@ -115,8 +115,8 @@ void connect4App::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
         case 5: _t->on_fifthColButton_clicked(); break;
         case 6: _t->on_sixthButtonCol_clicked(); break;
         case 7: _t->on_seventhColButton_clicked(); break;
-        case 8: _t->on_nextButton_2_clicked(); break;
-        case 9: _t->on_nextButton_clicked(); break;
+        case 8: _t->on_nextButton_clicked(); break;
+        case 9: _t->on_nextButton_2_clicked(); break;
         case 10: _t->on_nextButton_3_clicked(); break;
         default: ;
         }
