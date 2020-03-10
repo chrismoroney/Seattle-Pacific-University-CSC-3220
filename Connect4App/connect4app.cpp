@@ -9,19 +9,44 @@ connect4App::connect4App(QWidget *parent)
 {
     ui->setupUi(this);
 
-    red = Qt::red;
-    green = Qt::green;
-    cyan = Qt::cyan;
-    blue = Qt::blue;
-    magenta = Qt::magenta;
-    yellow = Qt::yellow;
-    white = Qt::white;
-    black = Qt::black;
-    gold = Qt::darkYellow;
-    maroon = Qt::darkRed;
-    darkGreen = Qt::darkGreen;
-    darkMagenta = Qt::darkMagenta;
+    red = QColor(252, 66, 66);
+    green = QColor(120, 255, 156);
+    cyan = QColor(33, 255, 251);
+    blue = QColor(33, 151, 255);
+    magenta = QColor(255, 51, 245);
+    yellow = QColor(252, 255, 51);
+    white = QColor(255, 255, 255);
+    black = QColor(0, 0, 0);
+    gold = QColor(214, 205, 24);
+    maroon = QColor(153, 24, 24);
+    darkGreen = QColor(34, 107, 17);
+    darkMagenta = QColor(128, 13, 112);
 
+    ui->redButton->setStyleSheet("background-color: rgb(252, 66, 66); color: rgb(214, 205, 24)");
+    ui->greenButton->setStyleSheet("background-color: rgb(120, 255, 156); color: rgb(128, 13, 112)");
+    ui->cyanButton->setStyleSheet("background-color: rgb(33, 255, 251)");
+    ui->blueButton->setStyleSheet("background-color: rgb(33, 151, 255)");
+    ui->magentaButton->setStyleSheet("background-color: rgb(255, 51, 245)");
+    ui->yellowButton->setStyleSheet("background-color: rgb(252, 255, 51)");
+    ui->whiteButton->setStyleSheet("background-color: rgb(255, 255, 255)");
+    ui->blackButton->setStyleSheet("background-color: rgb(0, 0, 0); color: rgb(255, 255, 255)");
+    ui->goldButton->setStyleSheet("background-color: rgb(214, 205, 24)");
+    ui->maroonButton->setStyleSheet("background-color: rgb(153, 24, 24)");
+    ui->darkGreenButton->setStyleSheet("background-color: rgb(34, 107, 17)");
+    ui->darkMagButton->setStyleSheet("background-color: rgb(128, 13, 112)");
+
+    ui->redButton_2->setStyleSheet("background-color: rgb(252, 66, 66)");
+    ui->greenButton_2->setStyleSheet("background-color: rgb(120, 255, 156)");
+    ui->cyanButton_2->setStyleSheet("background-color: rgb(33, 255, 251)");
+    ui->blueButton_2->setStyleSheet("background-color: rgb(33, 151, 255)");
+    ui->magentaButton_2->setStyleSheet("background-color: rgb(255, 51, 245)");
+    ui->yellowButton_2->setStyleSheet("background-color: rgb(252, 255, 51)");
+    ui->whiteButton_2->setStyleSheet("background-color: rgb(255, 255, 255)");
+    ui->blackButton_2->setStyleSheet("background-color: rgb(0, 0, 0)");
+    ui->goldButton_2->setStyleSheet("background-color: rgb(214, 205, 24)");
+    ui->maroonButton_2->setStyleSheet("background-color: rgb(153, 24, 24)");
+    ui->darkGreenButton_2->setStyleSheet("background-color: rgb(34, 107, 17)");
+    ui->darkMagButton_2->setStyleSheet("background-color: rgb(128, 13, 112)");
 
 }
 

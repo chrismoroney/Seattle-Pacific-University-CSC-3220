@@ -23,6 +23,12 @@
       <height>671</height>
      </rect>
     </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
     <property name="currentIndex">
      <number>0</number>
     </property>
@@ -45,7 +51,7 @@
       <widget class="QLineEdit" name="enteredName">
        <property name="geometry">
         <rect>
-         <x>170</x>
+         <x>100</x>
          <y>40</y>
          <width>401</width>
          <height>51</height>
@@ -54,14 +60,19 @@
        <property name="font">
         <font>
          <pointsize>20</pointsize>
+         <weight>75</weight>
          <italic>true</italic>
+         <bold>true</bold>
         </font>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
       <widget class="QLabel" name="nameLabel">
        <property name="geometry">
         <rect>
-         <x>170</x>
+         <x>100</x>
          <y>10</y>
          <width>401</width>
          <height>20</height>
@@ -77,7 +88,7 @@
       <widget class="QPushButton" name="redButton">
        <property name="geometry">
         <rect>
-         <x>160</x>
+         <x>90</x>
          <y>130</y>
          <width>211</width>
          <height>71</height>
@@ -86,6 +97,8 @@
        <property name="font">
         <font>
          <pointsize>24</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
@@ -95,7 +108,7 @@
       <widget class="QLabel" name="colorLabel">
        <property name="geometry">
         <rect>
-         <x>170</x>
+         <x>100</x>
          <y>100</y>
          <width>401</width>
          <height>20</height>
@@ -111,7 +124,7 @@
       <widget class="QPushButton" name="greenButton">
        <property name="geometry">
         <rect>
-         <x>160</x>
+         <x>90</x>
          <y>200</y>
          <width>211</width>
          <height>71</height>
@@ -120,6 +133,8 @@
        <property name="font">
         <font>
          <pointsize>24</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
@@ -129,7 +144,7 @@
       <widget class="QPushButton" name="cyanButton">
        <property name="geometry">
         <rect>
-         <x>160</x>
+         <x>90</x>
          <y>270</y>
          <width>211</width>
          <height>71</height>
@@ -138,6 +153,8 @@
        <property name="font">
         <font>
          <pointsize>24</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
@@ -147,7 +164,7 @@
       <widget class="QPushButton" name="blueButton">
        <property name="geometry">
         <rect>
-         <x>160</x>
+         <x>90</x>
          <y>340</y>
          <width>211</width>
          <height>71</height>
@@ -156,6 +173,8 @@
        <property name="font">
         <font>
          <pointsize>24</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
@@ -165,7 +184,7 @@
       <widget class="QPushButton" name="yellowButton">
        <property name="geometry">
         <rect>
-         <x>160</x>
+         <x>90</x>
          <y>480</y>
          <width>211</width>
          <height>71</height>
@@ -174,6 +193,8 @@
        <property name="font">
         <font>
          <pointsize>24</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
@@ -183,7 +204,7 @@
       <widget class="QPushButton" name="magentaButton">
        <property name="geometry">
         <rect>
-         <x>160</x>
+         <x>90</x>
          <y>410</y>
          <width>211</width>
          <height>71</height>
@@ -192,6 +213,8 @@
        <property name="font">
         <font>
          <pointsize>24</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
@@ -201,7 +224,7 @@
       <widget class="QPushButton" name="maroonButton">
        <property name="geometry">
         <rect>
-         <x>370</x>
+         <x>300</x>
          <y>340</y>
          <width>211</width>
          <height>71</height>
@@ -210,6 +233,8 @@
        <property name="font">
         <font>
          <pointsize>24</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
@@ -219,7 +244,7 @@
       <widget class="QPushButton" name="goldButton">
        <property name="geometry">
         <rect>
-         <x>370</x>
+         <x>300</x>
          <y>270</y>
          <width>211</width>
          <height>71</height>
@@ -228,6 +253,8 @@
        <property name="font">
         <font>
          <pointsize>24</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
@@ -237,7 +264,7 @@
       <widget class="QPushButton" name="darkMagButton">
        <property name="geometry">
         <rect>
-         <x>370</x>
+         <x>300</x>
          <y>480</y>
          <width>211</width>
          <height>71</height>
@@ -246,6 +273,8 @@
        <property name="font">
         <font>
          <pointsize>24</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
@@ -255,7 +284,7 @@
       <widget class="QPushButton" name="darkGreenButton">
        <property name="geometry">
         <rect>
-         <x>370</x>
+         <x>300</x>
          <y>410</y>
          <width>211</width>
          <height>71</height>
@@ -264,6 +293,8 @@
        <property name="font">
         <font>
          <pointsize>24</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
@@ -273,7 +304,7 @@
       <widget class="QPushButton" name="blackButton">
        <property name="geometry">
         <rect>
-         <x>370</x>
+         <x>300</x>
          <y>200</y>
          <width>211</width>
          <height>71</height>
@@ -282,6 +313,8 @@
        <property name="font">
         <font>
          <pointsize>24</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
@@ -291,7 +324,7 @@
       <widget class="QPushButton" name="whiteButton">
        <property name="geometry">
         <rect>
-         <x>370</x>
+         <x>300</x>
          <y>130</y>
          <width>211</width>
          <height>71</height>
@@ -300,6 +333,8 @@
        <property name="font">
         <font>
          <pointsize>24</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
@@ -326,6 +361,44 @@
         <string>NEXT</string>
        </property>
       </widget>
+      <widget class="QLabel" name="currentColLabel_2">
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>200</y>
+         <width>221</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Current Color:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="currentCol_2">
+       <property name="geometry">
+        <rect>
+         <x>560</x>
+         <y>230</y>
+         <width>191</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
      </widget>
     </widget>
     <widget class="QWidget" name="secondPlayerSelection">
@@ -347,7 +420,7 @@
       <widget class="QLineEdit" name="enteredName_2">
        <property name="geometry">
         <rect>
-         <x>170</x>
+         <x>100</x>
          <y>40</y>
          <width>401</width>
          <height>51</height>
@@ -356,14 +429,19 @@
        <property name="font">
         <font>
          <pointsize>20</pointsize>
+         <weight>75</weight>
          <italic>true</italic>
+         <bold>true</bold>
         </font>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
       <widget class="QLabel" name="nameLabel_2">
        <property name="geometry">
         <rect>
-         <x>170</x>
+         <x>100</x>
          <y>10</y>
          <width>401</width>
          <height>20</height>
@@ -379,7 +457,7 @@
       <widget class="QPushButton" name="redButton_2">
        <property name="geometry">
         <rect>
-         <x>160</x>
+         <x>90</x>
          <y>130</y>
          <width>211</width>
          <height>71</height>
@@ -388,6 +466,8 @@
        <property name="font">
         <font>
          <pointsize>24</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
@@ -397,7 +477,7 @@
       <widget class="QLabel" name="colorLabel_2">
        <property name="geometry">
         <rect>
-         <x>170</x>
+         <x>100</x>
          <y>100</y>
          <width>401</width>
          <height>20</height>
@@ -410,10 +490,10 @@
         <set>Qt::AlignCenter</set>
        </property>
       </widget>
-      <widget class="QPushButton" name="greenButton_3">
+      <widget class="QPushButton" name="greenButton_2">
        <property name="geometry">
         <rect>
-         <x>160</x>
+         <x>90</x>
          <y>200</y>
          <width>211</width>
          <height>71</height>
@@ -422,6 +502,8 @@
        <property name="font">
         <font>
          <pointsize>24</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
@@ -431,7 +513,7 @@
       <widget class="QPushButton" name="cyanButton_2">
        <property name="geometry">
         <rect>
-         <x>160</x>
+         <x>90</x>
          <y>270</y>
          <width>211</width>
          <height>71</height>
@@ -440,6 +522,8 @@
        <property name="font">
         <font>
          <pointsize>24</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
@@ -449,7 +533,7 @@
       <widget class="QPushButton" name="blueButton_2">
        <property name="geometry">
         <rect>
-         <x>160</x>
+         <x>90</x>
          <y>340</y>
          <width>211</width>
          <height>71</height>
@@ -458,6 +542,8 @@
        <property name="font">
         <font>
          <pointsize>24</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
@@ -467,7 +553,7 @@
       <widget class="QPushButton" name="yellowButton_2">
        <property name="geometry">
         <rect>
-         <x>160</x>
+         <x>90</x>
          <y>480</y>
          <width>211</width>
          <height>71</height>
@@ -476,6 +562,8 @@
        <property name="font">
         <font>
          <pointsize>24</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
@@ -485,7 +573,7 @@
       <widget class="QPushButton" name="magentaButton_2">
        <property name="geometry">
         <rect>
-         <x>160</x>
+         <x>90</x>
          <y>410</y>
          <width>211</width>
          <height>71</height>
@@ -494,6 +582,8 @@
        <property name="font">
         <font>
          <pointsize>24</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
@@ -503,7 +593,7 @@
       <widget class="QPushButton" name="maroonButton_2">
        <property name="geometry">
         <rect>
-         <x>370</x>
+         <x>300</x>
          <y>340</y>
          <width>211</width>
          <height>71</height>
@@ -512,6 +602,8 @@
        <property name="font">
         <font>
          <pointsize>24</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
@@ -521,7 +613,7 @@
       <widget class="QPushButton" name="goldButton_2">
        <property name="geometry">
         <rect>
-         <x>370</x>
+         <x>300</x>
          <y>270</y>
          <width>211</width>
          <height>71</height>
@@ -530,6 +622,8 @@
        <property name="font">
         <font>
          <pointsize>24</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
@@ -539,7 +633,7 @@
       <widget class="QPushButton" name="darkMagButton_2">
        <property name="geometry">
         <rect>
-         <x>370</x>
+         <x>300</x>
          <y>480</y>
          <width>211</width>
          <height>71</height>
@@ -548,6 +642,8 @@
        <property name="font">
         <font>
          <pointsize>24</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
@@ -557,7 +653,7 @@
       <widget class="QPushButton" name="darkGreenButton_2">
        <property name="geometry">
         <rect>
-         <x>370</x>
+         <x>300</x>
          <y>410</y>
          <width>211</width>
          <height>71</height>
@@ -566,6 +662,8 @@
        <property name="font">
         <font>
          <pointsize>24</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
@@ -575,7 +673,7 @@
       <widget class="QPushButton" name="blackButton_2">
        <property name="geometry">
         <rect>
-         <x>370</x>
+         <x>300</x>
          <y>200</y>
          <width>211</width>
          <height>71</height>
@@ -584,6 +682,8 @@
        <property name="font">
         <font>
          <pointsize>24</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
@@ -593,7 +693,7 @@
       <widget class="QPushButton" name="whiteButton_2">
        <property name="geometry">
         <rect>
-         <x>370</x>
+         <x>300</x>
          <y>130</y>
          <width>211</width>
          <height>71</height>
@@ -602,6 +702,8 @@
        <property name="font">
         <font>
          <pointsize>24</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
         </font>
        </property>
        <property name="text">
@@ -628,28 +730,145 @@
         <string>NEXT</string>
        </property>
       </widget>
+      <widget class="QLabel" name="currentColLabel">
+       <property name="geometry">
+        <rect>
+         <x>540</x>
+         <y>200</y>
+         <width>221</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Current Color:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="currentCol">
+       <property name="geometry">
+        <rect>
+         <x>560</x>
+         <y>230</y>
+         <width>191</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
      </widget>
     </widget>
     <widget class="QWidget" name="playerGoFirst">
-     <widget class="QPushButton" name="nextButton_3">
+     <widget class="QFrame" name="frame">
       <property name="geometry">
        <rect>
-        <x>730</x>
-        <y>500</y>
-        <width>141</width>
-        <height>71</height>
+        <x>120</x>
+        <y>60</y>
+        <width>771</width>
+        <height>561</height>
        </rect>
       </property>
-      <property name="font">
-       <font>
-        <pointsize>28</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
       </property>
-      <property name="text">
-       <string>NEXT</string>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
       </property>
+      <widget class="QPushButton" name="nextButton_3">
+       <property name="geometry">
+        <rect>
+         <x>600</x>
+         <y>480</y>
+         <width>141</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>28</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>NEXT</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>40</y>
+         <width>621</width>
+         <height>91</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>48</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Who's Going First?</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="name1Button">
+       <property name="geometry">
+        <rect>
+         <x>72</x>
+         <y>180</y>
+         <width>611</width>
+         <height>91</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>48</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>PushButton</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="name2Button">
+       <property name="geometry">
+        <rect>
+         <x>70</x>
+         <y>280</y>
+         <width>611</width>
+         <height>91</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>48</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>PushButton</string>
+       </property>
+      </widget>
      </widget>
     </widget>
     <widget class="QWidget" name="gameSection">
@@ -1441,8 +1660,8 @@
      <widget class="QPushButton" name="instructionsButton">
       <property name="geometry">
        <rect>
-        <x>840</x>
-        <y>40</y>
+        <x>860</x>
+        <y>0</y>
         <width>111</width>
         <height>41</height>
        </rect>
@@ -1462,6 +1681,32 @@
       </property>
       <property name="text">
        <string>Drop Piece</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>0</y>
+        <width>113</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Select Colors</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>740</x>
+        <y>40</y>
+        <width>113</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Themes</string>
       </property>
      </widget>
     </widget>

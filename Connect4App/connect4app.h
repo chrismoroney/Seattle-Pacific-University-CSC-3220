@@ -41,21 +41,21 @@ private slots:
 private:
     Ui::connect4App *ui;
 
-    QPalette red;
-    QPalette green;
-    QPalette cyan;
-    QPalette blue;
-    QPalette magenta;
-    QPalette yellow;
-    QPalette white;
-    QPalette black;
-    QPalette gold;
-    QPalette maroon;
-    QPalette darkGreen;
-    QPalette darkMagenta;
+    QColor red;
+    QColor green;
+    QColor cyan;
+    QColor blue;
+    QColor magenta;
+    QColor yellow;
+    QColor white;
+    QColor black;
+    QColor gold;
+    QColor maroon;
+    QColor darkGreen;
+    QColor darkMagenta;
 
-    QPalette selectedColor1;
-    QPalette selectedColor2;
+    QColor selectedColor1;
+    QColor selectedColor2;
 
     int numClicks = -1;
 };
