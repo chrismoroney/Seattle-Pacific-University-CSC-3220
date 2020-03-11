@@ -378,3 +378,21 @@ void connect4App::on_darkMagButton_2_clicked()
     ui->currentCol_2->setText("DARK MAGENTA");
     selectedColor2 = darkMagenta;
 }
+
+void connect4App::on_ResetButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+    numClicks = -1;
+    for (int i=0; i<7; i++){                         // reset all labels
+        for (int j=0; j<6; j++){
+            spaces.at(i)->at(j)->setStyleSheet("QLable {background-clor: rgb(240,240,240); color: rgb(0, 0, 0); font-weight: bold}");    // text not bold??
+            spaces.at(i)->at(j)->setText("Space");
+        }
+    }
+
+    for (int i=0; i<7; i++){
+        lastRows[i] = 0;                // reset last rows
+    }
+    ui->enteredName->setText("");
+    ui->enteredName_2->setText("");
+}
