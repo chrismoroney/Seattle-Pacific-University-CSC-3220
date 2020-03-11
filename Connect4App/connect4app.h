@@ -2,6 +2,8 @@
 #define CONNECT4APP_H
 
 #include <QMainWindow>
+#include <QLabel>
+#include <QList>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class connect4App; }
@@ -32,13 +34,88 @@ private slots:
 
     void on_seventhColButton_clicked();
 
+    void on_nextButton_clicked();
+
+    void on_nextButton_2_clicked();
+
+    void on_nextButton_3_clicked();
+
+    void on_redButton_clicked();
+
+    void on_greenButton_clicked();
+
+    void on_cyanButton_clicked();
+
+    void on_blueButton_clicked();
+
+    void on_magentaButton_clicked();
+
+    void on_yellowButton_clicked();
+
+    void on_whiteButton_clicked();
+
+    void on_blackButton_clicked();
+
+    void on_goldButton_clicked();
+
+    void on_maroonButton_clicked();
+
+    void on_darkGreenButton_clicked();
+
+    void on_darkMagButton_clicked();
+
+    void on_blackButton_2_clicked();
+
+    void on_redButton_2_clicked();
+
+    void on_greenButton_2_clicked();
+
+    void on_cyanButton_2_clicked();
+
+    void on_blueButton_2_clicked();
+
+    void on_magentaButton_2_clicked();
+
+    void on_yellowButton_2_clicked();
+
+    void on_whiteButton_2_clicked();
+
+    void on_goldButton_2_clicked();
+
+    void on_maroonButton_2_clicked();
+
+    void on_darkGreenButton_2_clicked();
+
+    void on_darkMagButton_2_clicked();
+
+    void on_ResetButton_clicked();
+
 private:
     Ui::connect4App *ui;
 
-    QColor currentColor;
-    QColor color1;
-    QColor color2;
+    QColor red;
+    QColor green;
+    QColor cyan;
+    QColor blue;
+    QColor magenta;
+    QColor yellow;
+    QColor white;
+    QColor black;
+    QColor gold;
+    QColor maroon;
+    QColor darkGreen;
+    QColor darkMagenta;
+
+    QColor selectedColor1;
+    QColor selectedColor2;
 
     int numClicks = -1;
+
+    QList<QList<QLabel*>*> spaces;
+    QList<int> lastRows;
+
+    void play(int columnNumber);
+
+
 };
 #endif // CONNECT4APP_H
