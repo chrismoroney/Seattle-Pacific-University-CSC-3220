@@ -88,6 +88,8 @@ private slots:
 
     void on_darkMagButton_2_clicked();
 
+    void on_ResetButton_clicked();
+
 private:
     Ui::connect4App *ui;
 
