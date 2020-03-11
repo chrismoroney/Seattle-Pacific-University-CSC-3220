@@ -30,7 +30,7 @@
      </font>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="firstPlayerSelection">
      <widget class="QFrame" name="playerInfoFrame1">
@@ -78,6 +78,12 @@
          <height>20</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
        <property name="text">
         <string>Player 1 Enter Your Name:</string>
        </property>
@@ -113,6 +119,12 @@
          <width>401</width>
          <height>20</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
        </property>
        <property name="text">
         <string>Select Your Color:</string>
@@ -383,17 +395,24 @@
         <set>Qt::AlignCenter</set>
        </property>
       </widget>
-      <widget class="QLabel" name="currentCol_2">
+      <widget class="QLabel" name="currentCol">
        <property name="geometry">
         <rect>
-         <x>560</x>
+         <x>550</x>
          <y>230</y>
-         <width>191</width>
+         <width>201</width>
          <height>61</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <pointsize>24</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
        <property name="text">
-        <string/>
+        <string>None</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -447,6 +466,12 @@
          <height>20</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
        <property name="text">
         <string>Player 2 Enter Your Name:</string>
        </property>
@@ -482,6 +507,12 @@
          <width>401</width>
          <height>20</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
        </property>
        <property name="text">
         <string>Select Your Color:</string>
@@ -752,17 +783,24 @@
         <set>Qt::AlignCenter</set>
        </property>
       </widget>
-      <widget class="QLabel" name="currentCol">
+      <widget class="QLabel" name="currentCol_2">
        <property name="geometry">
         <rect>
-         <x>560</x>
+         <x>550</x>
          <y>230</y>
-         <width>191</width>
+         <width>201</width>
          <height>61</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <pointsize>24</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
        <property name="text">
-        <string/>
+        <string>None</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -1699,7 +1737,7 @@
      <widget class="QPushButton" name="pushButton_2">
       <property name="geometry">
        <rect>
-        <x>740</x>
+        <x>860</x>
         <y>40</y>
         <width>113</width>
         <height>41</height>
@@ -1709,20 +1747,20 @@
        <string>Themes</string>
       </property>
      </widget>
+     <widget class="QLabel" name="playerLabel">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>30</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Go Player 1</string>
+      </property>
+     </widget>
     </widget>
-   </widget>
-   <widget class="QLabel" name="playerLabel">
-    <property name="geometry">
-     <rect>
-      <x>20</x>
-      <y>20</y>
-      <width>81</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Go Player 1</string>
-    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

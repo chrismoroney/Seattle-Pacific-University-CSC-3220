@@ -40,6 +40,54 @@ private slots:
 
     void on_nextButton_3_clicked();
 
+    void on_redButton_clicked();
+
+    void on_greenButton_clicked();
+
+    void on_cyanButton_clicked();
+
+    void on_blueButton_clicked();
+
+    void on_magentaButton_clicked();
+
+    void on_yellowButton_clicked();
+
+    void on_whiteButton_clicked();
+
+    void on_blackButton_clicked();
+
+    void on_goldButton_clicked();
+
+    void on_maroonButton_clicked();
+
+    void on_darkGreenButton_clicked();
+
+    void on_darkMagButton_clicked();
+
+    void on_blackButton_2_clicked();
+
+    void on_redButton_2_clicked();
+
+    void on_greenButton_2_clicked();
+
+    void on_cyanButton_2_clicked();
+
+    void on_blueButton_2_clicked();
+
+    void on_magentaButton_2_clicked();
+
+    void on_yellowButton_2_clicked();
+
+    void on_whiteButton_2_clicked();
+
+    void on_goldButton_2_clicked();
+
+    void on_maroonButton_2_clicked();
+
+    void on_darkGreenButton_2_clicked();
+
+    void on_darkMagButton_2_clicked();
+
 private:
     Ui::connect4App *ui;
 

@@ -51,7 +51,7 @@ public:
     QPushButton *whiteButton;
     QPushButton *nextButton;
     QLabel *currentColLabel_2;
-    QLabel *currentCol_2;
+    QLabel *currentCol;
     QWidget *secondPlayerSelection;
     QFrame *playerInfoFrame2;
     QLineEdit *enteredName_2;
@@ -71,7 +71,7 @@ public:
     QPushButton *whiteButton_2;
     QPushButton *nextButton_2;
     QLabel *currentColLabel;
-    QLabel *currentCol;
+    QLabel *currentCol_2;
     QWidget *playerGoFirst;
     QFrame *frame;
     QPushButton *nextButton_3;
@@ -133,6 +133,7 @@ public:
     QPushButton *seventhColButton;
     QPushButton *pushButton;
     QPushButton *pushButton_2;
+    QLabel *playerLabel;
     QMenuBar *menubar;
     QMenu *menuFile;
     QStatusBar *statusbar;
@@ -175,6 +176,7 @@ public:
         nameLabel = new QLabel(playerInfoFrame1);
         nameLabel->setObjectName(QString::fromUtf8("nameLabel"));
         nameLabel->setGeometry(QRect(100, 10, 401, 20));
+        nameLabel->setFont(font);
         nameLabel->setAlignment(Qt::AlignCenter);
         redButton = new QPushButton(playerInfoFrame1);
         redButton->setObjectName(QString::fromUtf8("redButton"));
@@ -187,6 +189,7 @@ public:
         colorLabel = new QLabel(playerInfoFrame1);
         colorLabel->setObjectName(QString::fromUtf8("colorLabel"));
         colorLabel->setGeometry(QRect(100, 100, 401, 20));
+        colorLabel->setFont(font);
         colorLabel->setAlignment(Qt::AlignCenter);
         greenButton = new QPushButton(playerInfoFrame1);
         greenButton->setObjectName(QString::fromUtf8("greenButton"));
@@ -245,10 +248,11 @@ public:
         currentColLabel_2->setGeometry(QRect(540, 200, 221, 20));
         currentColLabel_2->setFont(font);
         currentColLabel_2->setAlignment(Qt::AlignCenter);
-        currentCol_2 = new QLabel(playerInfoFrame1);
-        currentCol_2->setObjectName(QString::fromUtf8("currentCol_2"));
-        currentCol_2->setGeometry(QRect(560, 230, 191, 61));
-        currentCol_2->setAlignment(Qt::AlignCenter);
+        currentCol = new QLabel(playerInfoFrame1);
+        currentCol->setObjectName(QString::fromUtf8("currentCol"));
+        currentCol->setGeometry(QRect(550, 230, 201, 61));
+        currentCol->setFont(font2);
+        currentCol->setAlignment(Qt::AlignCenter);
         stackedWidget->addWidget(firstPlayerSelection);
         secondPlayerSelection = new QWidget();
         secondPlayerSelection->setObjectName(QString::fromUtf8("secondPlayerSelection"));
@@ -265,6 +269,7 @@ public:
         nameLabel_2 = new QLabel(playerInfoFrame2);
         nameLabel_2->setObjectName(QString::fromUtf8("nameLabel_2"));
         nameLabel_2->setGeometry(QRect(100, 10, 401, 20));
+        nameLabel_2->setFont(font);
         nameLabel_2->setAlignment(Qt::AlignCenter);
         redButton_2 = new QPushButton(playerInfoFrame2);
         redButton_2->setObjectName(QString::fromUtf8("redButton_2"));
@@ -273,6 +278,7 @@ public:
         colorLabel_2 = new QLabel(playerInfoFrame2);
         colorLabel_2->setObjectName(QString::fromUtf8("colorLabel_2"));
         colorLabel_2->setGeometry(QRect(100, 100, 401, 20));
+        colorLabel_2->setFont(font);
         colorLabel_2->setAlignment(Qt::AlignCenter);
         greenButton_2 = new QPushButton(playerInfoFrame2);
         greenButton_2->setObjectName(QString::fromUtf8("greenButton_2"));
@@ -327,10 +333,11 @@ public:
         currentColLabel->setGeometry(QRect(540, 200, 221, 20));
         currentColLabel->setFont(font);
         currentColLabel->setAlignment(Qt::AlignCenter);
-        currentCol = new QLabel(playerInfoFrame2);
-        currentCol->setObjectName(QString::fromUtf8("currentCol"));
-        currentCol->setGeometry(QRect(560, 230, 191, 61));
-        currentCol->setAlignment(Qt::AlignCenter);
+        currentCol_2 = new QLabel(playerInfoFrame2);
+        currentCol_2->setObjectName(QString::fromUtf8("currentCol_2"));
+        currentCol_2->setGeometry(QRect(550, 230, 201, 61));
+        currentCol_2->setFont(font2);
+        currentCol_2->setAlignment(Qt::AlignCenter);
         stackedWidget->addWidget(secondPlayerSelection);
         playerGoFirst = new QWidget();
         playerGoFirst->setObjectName(QString::fromUtf8("playerGoFirst"));
@@ -570,7 +577,10 @@ public:
         pushButton->setGeometry(QRect(740, 0, 113, 41));
         pushButton_2 = new QPushButton(gameSection);
         pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setGeometry(QRect(740, 40, 113, 41));
+        pushButton_2->setGeometry(QRect(860, 40, 113, 41));
+        playerLabel = new QLabel(gameSection);
+        playerLabel->setObjectName(QString::fromUtf8("playerLabel"));
+        playerLabel->setGeometry(QRect(30, 30, 81, 31));
         stackedWidget->addWidget(gameSection);
         connect4App->setCentralWidget(centralwidget);
         menubar = new QMenuBar(connect4App);
@@ -588,7 +598,7 @@ public:
 
         retranslateUi(connect4App);
 
-        stackedWidget->setCurrentIndex(0);
+        stackedWidget->setCurrentIndex(3);
 
 
         QMetaObject::connectSlotsByName(connect4App);
@@ -615,7 +625,7 @@ public:
         whiteButton->setText(QApplication::translate("connect4App", "WHITE", nullptr));
         nextButton->setText(QApplication::translate("connect4App", "NEXT", nullptr));
         currentColLabel_2->setText(QApplication::translate("connect4App", "Current Color:", nullptr));
-        currentCol_2->setText(QString());
+        currentCol->setText(QApplication::translate("connect4App", "None", nullptr));
         nameLabel_2->setText(QApplication::translate("connect4App", "Player 2 Enter Your Name:", nullptr));
         redButton_2->setText(QApplication::translate("connect4App", "RED", nullptr));
         colorLabel_2->setText(QApplication::translate("connect4App", "Select Your Color:", nullptr));
@@ -632,7 +642,7 @@ public:
         whiteButton_2->setText(QApplication::translate("connect4App", "WHITE", nullptr));
         nextButton_2->setText(QApplication::translate("connect4App", "NEXT", nullptr));
         currentColLabel->setText(QApplication::translate("connect4App", "Current Color:", nullptr));
-        currentCol->setText(QString());
+        currentCol_2->setText(QApplication::translate("connect4App", "None", nullptr));
         nextButton_3->setText(QApplication::translate("connect4App", "NEXT", nullptr));
         label->setText(QApplication::translate("connect4App", "Who's Going First?", nullptr));
         name1Button->setText(QApplication::translate("connect4App", "PushButton", nullptr));
@@ -690,6 +700,7 @@ public:
         seventhColButton->setText(QApplication::translate("connect4App", "Drop Piece", nullptr));
         pushButton->setText(QApplication::translate("connect4App", "Select Colors", nullptr));
         pushButton_2->setText(QApplication::translate("connect4App", "Themes", nullptr));
+        playerLabel->setText(QApplication::translate("connect4App", "Go Player 1", nullptr));
         menuFile->setTitle(QApplication::translate("connect4App", "File", nullptr));
     } // retranslateUi
 
