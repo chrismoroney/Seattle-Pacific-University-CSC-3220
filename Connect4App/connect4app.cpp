@@ -128,7 +128,7 @@ void connect4App::play(int columnNumber){
 
     numClicks++;
 
-    QString stylesheet = numClicks % 2 == 0 ? "background-color #" + QString::number(selectedColor1.rgb(), 16) : "background-color #" + QString::number(selectedColor2.rgb(), 16);
+    QString stylesheet = numClicks % 2 == 0 ? "background-color: #" + QString::number(selectedColor1.rgb(), 16) : "background-color: #" + QString::number(selectedColor2.rgb(), 16);
     QLabel* space = columnSpaces->at(lastRow);
 
     space->setText("");
