@@ -114,6 +114,10 @@ private:
 
     void play(int columnNumber);
 
+    bool check(int firstColumn, int firstRow, int horizontalMove, int verticalMove);
+
+    QString getColor(int column, int row);
+
 
 };
 #endif // CONNECT4APP_H
