@@ -3,6 +3,7 @@
 
 #include <QMessageBox>
 #include <QDebug>
+#include <QMessageBox>
 
 connect4App::connect4App(QWidget *parent)
     : QMainWindow(parent)
@@ -86,32 +87,6 @@ void connect4App::on_instructionsButton_clicked()
     instructions.exec();
 }
 
-//TO DO::
-//- implement check()
-//- call check with the 7 posibilities
-
-//===============
-
-//// Vertical
-//check(startPoint, 0, 1);
-
-//// Horizontal
-//check(1, 0);
-//check(-1, 0);
-
-//// Diagonal 1
-//check(1, 1);
-//check(-1, -1);
-
-//// Diagonal 2
-//check(1, -1);
-//check(-1, 1);
-//check(columnMovement, rowMovement) {
-//   check if there's any way to win here [boundaries]
-//   it applies the movement 3 times (current + 3)
-//   if all are the same color, we have a winner
-//
-
 void connect4App::play(int columnNumber){
 
     QList<QLabel*>* columnSpaces = spaces.at(columnNumber - 1);
@@ -139,7 +114,60 @@ void connect4App::play(int columnNumber){
 
     lastRows[columnNumber - 1] = lastRow + 1;
 
+    for(int column = 1; column <= spaces.length(); column++)
+    {
+        for(int row = 1; row <= columnSpaces->length(); row++)
+        {
+            if(check(column, row, 1, 0) ||
+                    check(column, row, 0, 1) ||
+                    check(column, row, 1, -1) ||
+                    check(column, row, -1, -1)) {
+                return;
+            }
+
+        }
+    }
 }
+
+bool connect4App::check(int firstColumn, int firstRow, int horizontalMove, int verticalMove){
+
+
+    QString firstColor = getColor(firstColumn, firstRow);
+
+    if(firstColor == NULL)
+        return false;
+    for (int index = 1; index <= 3; index++) {
+        int currentColumn = firstColumn + horizontalMove * index;
+        int currentRow = firstRow + verticalMove * index;
+        QString color = getColor(currentColumn, currentRow);
+        if (color == NULL || color != firstColor) {
+            return false;
+        }
+    }
+
+    QMessageBox message;
+    message.setText("You won!");
+    message.exec();
+    close();
+    return true;
+}
+
+QString connect4App::getColor(int column, int row) {
+
+    if(column < 1 || column > spaces.length())
+        return NULL;
+
+    QList<QLabel*>* columnSpaces = spaces.at(column - 1);
+
+    if(row < 1 || row > columnSpaces->length())
+        return NULL;
+
+    QLabel* space = columnSpaces->at(row - 1);
+    return space->styleSheet();
+
+}
+
+
 void connect4App::on_firstColButton_clicked()
 {
     play(1);
