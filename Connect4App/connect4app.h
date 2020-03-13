@@ -88,6 +88,10 @@ private slots:
 
     void on_darkMagButton_2_clicked();
 
+    void on_name1Button_clicked();
+
+    void on_name2Button_clicked();
+
 private:
     Ui::connect4App *ui;
 
@@ -106,6 +110,12 @@ private:
 
     QColor selectedColor1;
     QColor selectedColor2;
+    QColor selectedTextColor1;
+    QColor selectedTextColor2;
+    QColor textColor;
+
+    QString name1;
+    QString name2;
 
     int numClicks = -1;
 

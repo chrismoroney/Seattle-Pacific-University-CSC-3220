@@ -30,7 +30,7 @@
      </font>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="firstPlayerSelection">
      <widget class="QFrame" name="playerInfoFrame1">
@@ -844,7 +844,7 @@
         <string>NEXT</string>
        </property>
       </widget>
-      <widget class="QLabel" name="label">
+      <widget class="QLabel" name="firstLabel">
        <property name="geometry">
         <rect>
          <x>70</x>
@@ -871,7 +871,7 @@
        <property name="geometry">
         <rect>
          <x>72</x>
-         <y>180</y>
+         <y>150</y>
          <width>611</width>
          <height>91</height>
         </rect>
@@ -891,7 +891,7 @@
        <property name="geometry">
         <rect>
          <x>70</x>
-         <y>280</y>
+         <y>250</y>
          <width>611</width>
          <height>91</height>
         </rect>
@@ -905,6 +905,42 @@
        </property>
        <property name="text">
         <string>PushButton</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="currentPickFirst">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>420</y>
+         <width>321</width>
+         <height>101</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>48</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>390</y>
+         <width>321</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Selected:</string>
        </property>
       </widget>
      </widget>
@@ -1685,6 +1721,14 @@
         <height>31</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <pointsize>28</pointsize>
+        <weight>75</weight>
+        <italic>true</italic>
+        <bold>true</bold>
+       </font>
+      </property>
       <property name="text">
        <string>Player 1 turn</string>
       </property>
@@ -1745,19 +1789,6 @@
       </property>
       <property name="text">
        <string>Themes</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="playerLabel">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>30</y>
-        <width>81</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Go Player 1</string>
       </property>
      </widget>
     </widget>
