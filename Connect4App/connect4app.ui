@@ -29,8 +29,11 @@
       <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="firstPlayerSelection">
      <widget class="QFrame" name="playerInfoFrame1">
@@ -42,6 +45,9 @@
         <height>561</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
       </property>
@@ -51,18 +57,19 @@
       <widget class="QLineEdit" name="enteredName">
        <property name="geometry">
         <rect>
-         <x>100</x>
+         <x>90</x>
          <y>40</y>
-         <width>401</width>
+         <width>421</width>
          <height>51</height>
         </rect>
        </property>
        <property name="font">
         <font>
-         <pointsize>20</pointsize>
-         <weight>75</weight>
+         <family>All Round Gothic</family>
+         <pointsize>24</pointsize>
+         <weight>50</weight>
          <italic>true</italic>
-         <bold>true</bold>
+         <bold>false</bold>
         </font>
        </property>
        <property name="alignment">
@@ -80,8 +87,10 @@
        </property>
        <property name="font">
         <font>
-         <weight>75</weight>
-         <bold>true</bold>
+         <family>SF Pro Display</family>
+         <pointsize>18</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
@@ -102,13 +111,14 @@
        </property>
        <property name="font">
         <font>
+         <family>All Round Gothic</family>
          <pointsize>24</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
-        <string>RED</string>
+        <string>Red</string>
        </property>
       </widget>
       <widget class="QLabel" name="colorLabel">
@@ -122,8 +132,10 @@
        </property>
        <property name="font">
         <font>
-         <weight>75</weight>
-         <bold>true</bold>
+         <family>SF Pro Display</family>
+         <pointsize>18</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
@@ -144,13 +156,14 @@
        </property>
        <property name="font">
         <font>
+         <family>All Round Gothic</family>
          <pointsize>24</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
-        <string>GREEN</string>
+        <string>Green</string>
        </property>
       </widget>
       <widget class="QPushButton" name="cyanButton">
@@ -164,13 +177,14 @@
        </property>
        <property name="font">
         <font>
+         <family>All Round Gothic</family>
          <pointsize>24</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
-        <string>CYAN</string>
+        <string>Cyan</string>
        </property>
       </widget>
       <widget class="QPushButton" name="blueButton">
@@ -184,13 +198,14 @@
        </property>
        <property name="font">
         <font>
+         <family>All Round Gothic</family>
          <pointsize>24</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
-        <string>BLUE</string>
+        <string>Blue</string>
        </property>
       </widget>
       <widget class="QPushButton" name="yellowButton">
@@ -204,13 +219,14 @@
        </property>
        <property name="font">
         <font>
+         <family>All Round Gothic</family>
          <pointsize>24</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
-        <string>YELLOW</string>
+        <string>Yellow</string>
        </property>
       </widget>
       <widget class="QPushButton" name="magentaButton">
@@ -224,13 +240,14 @@
        </property>
        <property name="font">
         <font>
+         <family>All Round Gothic</family>
          <pointsize>24</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
-        <string>MAGENTA</string>
+        <string>Magenta</string>
        </property>
       </widget>
       <widget class="QPushButton" name="maroonButton">
@@ -244,13 +261,14 @@
        </property>
        <property name="font">
         <font>
+         <family>All Round Gothic</family>
          <pointsize>24</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
-        <string>MAROON</string>
+        <string>Maroon</string>
        </property>
       </widget>
       <widget class="QPushButton" name="goldButton">
@@ -264,13 +282,14 @@
        </property>
        <property name="font">
         <font>
+         <family>All Round Gothic</family>
          <pointsize>24</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
-        <string>GOLD</string>
+        <string>Gold</string>
        </property>
       </widget>
       <widget class="QPushButton" name="darkMagButton">
@@ -284,13 +303,14 @@
        </property>
        <property name="font">
         <font>
+         <family>All Round Gothic</family>
          <pointsize>24</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
-        <string>DARK MAGENTA</string>
+        <string>Dark Magenta</string>
        </property>
       </widget>
       <widget class="QPushButton" name="darkGreenButton">
@@ -304,13 +324,14 @@
        </property>
        <property name="font">
         <font>
+         <family>All Round Gothic</family>
          <pointsize>24</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
-        <string>DARK GREEN</string>
+        <string>Dark Green</string>
        </property>
       </widget>
       <widget class="QPushButton" name="blackButton">
@@ -324,13 +345,14 @@
        </property>
        <property name="font">
         <font>
+         <family>All Round Gothic</family>
          <pointsize>24</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
-        <string>BLACK</string>
+        <string>Black</string>
        </property>
       </widget>
       <widget class="QPushButton" name="whiteButton">
@@ -344,48 +366,52 @@
        </property>
        <property name="font">
         <font>
+         <family>All Round Gothic</family>
          <pointsize>24</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
-        <string>WHITE</string>
+        <string>White</string>
        </property>
       </widget>
       <widget class="QPushButton" name="nextButton">
        <property name="geometry">
         <rect>
-         <x>600</x>
+         <x>540</x>
          <y>480</y>
-         <width>141</width>
+         <width>211</width>
          <height>71</height>
         </rect>
        </property>
        <property name="font">
         <font>
-         <pointsize>28</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <family>SF Pro Display</family>
+         <pointsize>18</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
-        <string>NEXT</string>
+        <string>Next</string>
        </property>
       </widget>
       <widget class="QLabel" name="currentColLabel_2">
        <property name="geometry">
         <rect>
-         <x>540</x>
-         <y>200</y>
-         <width>221</width>
+         <x>530</x>
+         <y>100</y>
+         <width>211</width>
          <height>20</height>
         </rect>
        </property>
        <property name="font">
         <font>
-         <weight>75</weight>
-         <bold>true</bold>
+         <family>SF Pro Display</family>
+         <pointsize>18</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
@@ -398,17 +424,18 @@
       <widget class="QLabel" name="currentCol">
        <property name="geometry">
         <rect>
-         <x>550</x>
-         <y>230</y>
-         <width>201</width>
-         <height>61</height>
+         <x>540</x>
+         <y>130</y>
+         <width>191</width>
+         <height>71</height>
         </rect>
        </property>
        <property name="font">
         <font>
+         <family>All Round Gothic</family>
          <pointsize>24</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
@@ -439,18 +466,19 @@
       <widget class="QLineEdit" name="enteredName_2">
        <property name="geometry">
         <rect>
-         <x>100</x>
+         <x>90</x>
          <y>40</y>
-         <width>401</width>
+         <width>421</width>
          <height>51</height>
         </rect>
        </property>
        <property name="font">
         <font>
-         <pointsize>20</pointsize>
-         <weight>75</weight>
+         <family>All Round Gothic</family>
+         <pointsize>24</pointsize>
+         <weight>50</weight>
          <italic>true</italic>
-         <bold>true</bold>
+         <bold>false</bold>
         </font>
        </property>
        <property name="alignment">
@@ -468,8 +496,10 @@
        </property>
        <property name="font">
         <font>
-         <weight>75</weight>
-         <bold>true</bold>
+         <family>SF Pro Display</family>
+         <pointsize>18</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
@@ -490,13 +520,14 @@
        </property>
        <property name="font">
         <font>
+         <family>All Round Gothic</family>
          <pointsize>24</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
-        <string>RED</string>
+        <string>Red</string>
        </property>
       </widget>
       <widget class="QLabel" name="colorLabel_2">
@@ -510,8 +541,10 @@
        </property>
        <property name="font">
         <font>
-         <weight>75</weight>
-         <bold>true</bold>
+         <family>SF Pro Display</family>
+         <pointsize>18</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
@@ -532,13 +565,14 @@
        </property>
        <property name="font">
         <font>
+         <family>All Round Gothic</family>
          <pointsize>24</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
-        <string>GREEN</string>
+        <string>Green</string>
        </property>
       </widget>
       <widget class="QPushButton" name="cyanButton_2">
@@ -552,13 +586,14 @@
        </property>
        <property name="font">
         <font>
+         <family>All Round Gothic</family>
          <pointsize>24</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
-        <string>CYAN</string>
+        <string>Cyan</string>
        </property>
       </widget>
       <widget class="QPushButton" name="blueButton_2">
@@ -572,13 +607,14 @@
        </property>
        <property name="font">
         <font>
+         <family>All Round Gothic</family>
          <pointsize>24</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
-        <string>BLUE</string>
+        <string>Blue</string>
        </property>
       </widget>
       <widget class="QPushButton" name="yellowButton_2">
@@ -592,13 +628,14 @@
        </property>
        <property name="font">
         <font>
+         <family>All Round Gothic</family>
          <pointsize>24</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
-        <string>YELLOW</string>
+        <string>Yellow</string>
        </property>
       </widget>
       <widget class="QPushButton" name="magentaButton_2">
@@ -612,13 +649,14 @@
        </property>
        <property name="font">
         <font>
+         <family>All Round Gothic</family>
          <pointsize>24</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
-        <string>MAGENTA</string>
+        <string>Magenta</string>
        </property>
       </widget>
       <widget class="QPushButton" name="maroonButton_2">
@@ -632,13 +670,14 @@
        </property>
        <property name="font">
         <font>
+         <family>All Round Gothic</family>
          <pointsize>24</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
-        <string>MAROON</string>
+        <string>Maroon</string>
        </property>
       </widget>
       <widget class="QPushButton" name="goldButton_2">
@@ -652,13 +691,14 @@
        </property>
        <property name="font">
         <font>
+         <family>All Round Gothic</family>
          <pointsize>24</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
-        <string>GOLD</string>
+        <string>Gold</string>
        </property>
       </widget>
       <widget class="QPushButton" name="darkMagButton_2">
@@ -672,13 +712,14 @@
        </property>
        <property name="font">
         <font>
+         <family>All Round Gothic</family>
          <pointsize>24</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
-        <string>DARK MAGENTA</string>
+        <string>Dark Magenta</string>
        </property>
       </widget>
       <widget class="QPushButton" name="darkGreenButton_2">
@@ -692,13 +733,14 @@
        </property>
        <property name="font">
         <font>
+         <family>All Round Gothic</family>
          <pointsize>24</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
-        <string>DARK GREEN</string>
+        <string>Dark Green</string>
        </property>
       </widget>
       <widget class="QPushButton" name="blackButton_2">
@@ -712,13 +754,14 @@
        </property>
        <property name="font">
         <font>
+         <family>All Round Gothic</family>
          <pointsize>24</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
-        <string>BLACK</string>
+        <string>Black</string>
        </property>
       </widget>
       <widget class="QPushButton" name="whiteButton_2">
@@ -732,48 +775,52 @@
        </property>
        <property name="font">
         <font>
+         <family>All Round Gothic</family>
          <pointsize>24</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
-        <string>WHITE</string>
+        <string>White</string>
        </property>
       </widget>
       <widget class="QPushButton" name="nextButton_2">
        <property name="geometry">
         <rect>
-         <x>600</x>
+         <x>540</x>
          <y>480</y>
-         <width>141</width>
+         <width>211</width>
          <height>71</height>
         </rect>
        </property>
        <property name="font">
         <font>
-         <pointsize>28</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <family>SF Pro Display</family>
+         <pointsize>18</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
-        <string>NEXT</string>
+        <string>Next</string>
        </property>
       </widget>
       <widget class="QLabel" name="currentColLabel">
        <property name="geometry">
         <rect>
-         <x>540</x>
-         <y>200</y>
-         <width>221</width>
+         <x>520</x>
+         <y>100</y>
+         <width>231</width>
          <height>20</height>
         </rect>
        </property>
        <property name="font">
         <font>
-         <weight>75</weight>
-         <bold>true</bold>
+         <family>SF Pro Display</family>
+         <pointsize>18</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
@@ -786,17 +833,18 @@
       <widget class="QLabel" name="currentCol_2">
        <property name="geometry">
         <rect>
-         <x>550</x>
-         <y>230</y>
-         <width>201</width>
-         <height>61</height>
+         <x>530</x>
+         <y>130</y>
+         <width>211</width>
+         <height>71</height>
         </rect>
        </property>
        <property name="font">
         <font>
+         <family>All Round Gothic</family>
          <pointsize>24</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
@@ -818,6 +866,9 @@
         <height>561</height>
        </rect>
       </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
       <property name="frameShape">
        <enum>QFrame::StyledPanel</enum>
       </property>
@@ -827,41 +878,43 @@
       <widget class="QPushButton" name="nextButton_3">
        <property name="geometry">
         <rect>
-         <x>600</x>
+         <x>530</x>
          <y>480</y>
-         <width>141</width>
+         <width>161</width>
          <height>71</height>
         </rect>
        </property>
        <property name="font">
         <font>
-         <pointsize>28</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <family>SF Pro Display</family>
+         <pointsize>18</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
-        <string>NEXT</string>
+        <string>Next</string>
        </property>
       </widget>
       <widget class="QLabel" name="firstLabel">
        <property name="geometry">
         <rect>
          <x>70</x>
-         <y>40</y>
+         <y>20</y>
          <width>621</width>
-         <height>91</height>
+         <height>51</height>
         </rect>
        </property>
        <property name="font">
         <font>
-         <pointsize>48</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <family>SF Pro Display</family>
+         <pointsize>18</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
-        <string>Who's Going First?</string>
+        <string>Who's going first?</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -870,17 +923,18 @@
       <widget class="QPushButton" name="name1Button">
        <property name="geometry">
         <rect>
-         <x>72</x>
-         <y>150</y>
+         <x>70</x>
+         <y>70</y>
          <width>611</width>
          <height>91</height>
         </rect>
        </property>
        <property name="font">
         <font>
-         <pointsize>48</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <family>All Round Gothic</family>
+         <pointsize>24</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
@@ -891,16 +945,17 @@
        <property name="geometry">
         <rect>
          <x>70</x>
-         <y>250</y>
+         <y>170</y>
          <width>611</width>
          <height>91</height>
         </rect>
        </property>
        <property name="font">
         <font>
-         <pointsize>48</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <family>All Round Gothic</family>
+         <pointsize>24</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
        </property>
        <property name="text">
@@ -910,18 +965,22 @@
       <widget class="QLabel" name="currentPickFirst">
        <property name="geometry">
         <rect>
-         <x>80</x>
-         <y>420</y>
-         <width>321</width>
-         <height>101</height>
+         <x>70</x>
+         <y>370</y>
+         <width>611</width>
+         <height>91</height>
         </rect>
        </property>
        <property name="font">
         <font>
-         <pointsize>48</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
+         <family>All Round Gothic</family>
+         <pointsize>24</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
         </font>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::StyledPanel</enum>
        </property>
        <property name="text">
         <string/>
@@ -934,13 +993,24 @@
        <property name="geometry">
         <rect>
          <x>80</x>
-         <y>390</y>
-         <width>321</width>
-         <height>16</height>
+         <y>300</y>
+         <width>601</width>
+         <height>71</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>18</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
        </property>
        <property name="text">
         <string>Selected:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </widget>
@@ -970,6 +1040,12 @@
          <height>31</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Space</string>
        </property>
@@ -985,6 +1061,12 @@
          <width>51</width>
          <height>31</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>12</pointsize>
+        </font>
        </property>
        <property name="text">
         <string>Space</string>
@@ -1002,6 +1084,12 @@
          <height>31</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Space</string>
        </property>
@@ -1017,6 +1105,12 @@
          <width>51</width>
          <height>31</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>12</pointsize>
+        </font>
        </property>
        <property name="text">
         <string>Space</string>
@@ -1034,6 +1128,12 @@
          <height>31</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Space</string>
        </property>
@@ -1049,6 +1149,15 @@
          <width>51</width>
          <height>31</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
        </property>
        <property name="text">
         <string>Space</string>
@@ -1066,6 +1175,12 @@
          <height>31</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Space</string>
        </property>
@@ -1081,6 +1196,12 @@
          <width>51</width>
          <height>31</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>12</pointsize>
+        </font>
        </property>
        <property name="text">
         <string>Space</string>
@@ -1098,6 +1219,12 @@
          <height>31</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Space</string>
        </property>
@@ -1113,6 +1240,12 @@
          <width>51</width>
          <height>31</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>12</pointsize>
+        </font>
        </property>
        <property name="text">
         <string>Space</string>
@@ -1130,6 +1263,12 @@
          <height>31</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Space</string>
        </property>
@@ -1145,6 +1284,12 @@
          <width>51</width>
          <height>31</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>12</pointsize>
+        </font>
        </property>
        <property name="text">
         <string>Space</string>
@@ -1162,6 +1307,12 @@
          <height>31</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Space</string>
        </property>
@@ -1177,6 +1328,12 @@
          <width>51</width>
          <height>31</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>12</pointsize>
+        </font>
        </property>
        <property name="text">
         <string>Space</string>
@@ -1194,6 +1351,12 @@
          <height>31</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Space</string>
        </property>
@@ -1209,6 +1372,12 @@
          <width>51</width>
          <height>31</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>12</pointsize>
+        </font>
        </property>
        <property name="text">
         <string>Space</string>
@@ -1226,6 +1395,12 @@
          <height>31</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Space</string>
        </property>
@@ -1241,6 +1416,12 @@
          <width>51</width>
          <height>31</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>12</pointsize>
+        </font>
        </property>
        <property name="text">
         <string>Space</string>
@@ -1258,6 +1439,12 @@
          <height>31</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Space</string>
        </property>
@@ -1273,6 +1460,12 @@
          <width>51</width>
          <height>31</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>12</pointsize>
+        </font>
        </property>
        <property name="text">
         <string>Space</string>
@@ -1290,6 +1483,12 @@
          <height>31</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Space</string>
        </property>
@@ -1305,6 +1504,12 @@
          <width>51</width>
          <height>31</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>12</pointsize>
+        </font>
        </property>
        <property name="text">
         <string>Space</string>
@@ -1322,6 +1527,12 @@
          <height>31</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Space</string>
        </property>
@@ -1337,6 +1548,12 @@
          <width>51</width>
          <height>31</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>12</pointsize>
+        </font>
        </property>
        <property name="text">
         <string>Space</string>
@@ -1354,6 +1571,12 @@
          <height>31</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Space</string>
        </property>
@@ -1369,6 +1592,12 @@
          <width>51</width>
          <height>31</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>12</pointsize>
+        </font>
        </property>
        <property name="text">
         <string>Space</string>
@@ -1386,6 +1615,12 @@
          <height>31</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Space</string>
        </property>
@@ -1401,6 +1636,12 @@
          <width>51</width>
          <height>31</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>12</pointsize>
+        </font>
        </property>
        <property name="text">
         <string>Space</string>
@@ -1418,6 +1659,12 @@
          <height>31</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Space</string>
        </property>
@@ -1433,6 +1680,12 @@
          <width>51</width>
          <height>31</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>12</pointsize>
+        </font>
        </property>
        <property name="text">
         <string>Space</string>
@@ -1450,6 +1703,12 @@
          <height>31</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Space</string>
        </property>
@@ -1465,6 +1724,12 @@
          <width>51</width>
          <height>31</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>12</pointsize>
+        </font>
        </property>
        <property name="text">
         <string>Space</string>
@@ -1482,6 +1747,12 @@
          <height>31</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Space</string>
        </property>
@@ -1497,6 +1768,12 @@
          <width>51</width>
          <height>31</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>12</pointsize>
+        </font>
        </property>
        <property name="text">
         <string>Space</string>
@@ -1514,6 +1791,12 @@
          <height>31</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Space</string>
        </property>
@@ -1529,6 +1812,12 @@
          <width>51</width>
          <height>31</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>12</pointsize>
+        </font>
        </property>
        <property name="text">
         <string>Space</string>
@@ -1546,6 +1835,12 @@
          <height>31</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Space</string>
        </property>
@@ -1561,6 +1856,12 @@
          <width>51</width>
          <height>31</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>12</pointsize>
+        </font>
        </property>
        <property name="text">
         <string>Space</string>
@@ -1578,6 +1879,12 @@
          <height>31</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Space</string>
        </property>
@@ -1593,6 +1900,12 @@
          <width>51</width>
          <height>31</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>12</pointsize>
+        </font>
        </property>
        <property name="text">
         <string>Space</string>
@@ -1610,6 +1923,12 @@
          <height>31</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
        <property name="text">
         <string>Space</string>
        </property>
@@ -1625,6 +1944,12 @@
          <width>51</width>
          <height>31</height>
         </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>SF Pro Display</family>
+         <pointsize>12</pointsize>
+        </font>
        </property>
        <property name="text">
         <string>Space</string>
@@ -1643,6 +1968,12 @@
         <height>41</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <family>SF Pro Display</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
       <property name="text">
        <string>Drop Piece</string>
       </property>
@@ -1655,6 +1986,12 @@
         <width>91</width>
         <height>41</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>SF Pro Display</family>
+        <pointsize>12</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>Drop Piece</string>
@@ -1669,6 +2006,12 @@
         <height>41</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <family>SF Pro Display</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
       <property name="text">
        <string>Drop Piece</string>
       </property>
@@ -1681,6 +2024,12 @@
         <width>91</width>
         <height>41</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>SF Pro Display</family>
+        <pointsize>12</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>Drop Piece</string>
@@ -1695,6 +2044,12 @@
         <height>41</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <family>SF Pro Display</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
       <property name="text">
        <string>Drop Piece</string>
       </property>
@@ -1708,6 +2063,12 @@
         <height>41</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <family>SF Pro Display</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
       <property name="text">
        <string>Drop Piece</string>
       </property>
@@ -1716,17 +2077,18 @@
       <property name="geometry">
        <rect>
         <x>130</x>
-        <y>50</y>
+        <y>40</y>
         <width>711</width>
         <height>31</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>28</pointsize>
-        <weight>75</weight>
-        <italic>true</italic>
-        <bold>true</bold>
+        <family>All Round Gothic</family>
+        <pointsize>24</pointsize>
+        <weight>50</weight>
+        <italic>false</italic>
+        <bold>false</bold>
        </font>
       </property>
       <property name="text">
@@ -1742,11 +2104,17 @@
      <widget class="QPushButton" name="instructionsButton">
       <property name="geometry">
        <rect>
-        <x>860</x>
-        <y>0</y>
-        <width>111</width>
-        <height>41</height>
+        <x>850</x>
+        <y>90</y>
+        <width>141</width>
+        <height>61</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>SF Pro Display</family>
+        <pointsize>18</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>Instructions</string>
@@ -1761,6 +2129,12 @@
         <height>41</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <family>SF Pro Display</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
       <property name="text">
        <string>Drop Piece</string>
       </property>
@@ -1768,11 +2142,17 @@
      <widget class="QPushButton" name="pushButton">
       <property name="geometry">
        <rect>
-        <x>740</x>
-        <y>0</y>
-        <width>113</width>
-        <height>41</height>
+        <x>850</x>
+        <y>160</y>
+        <width>141</width>
+        <height>61</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>SF Pro Display</family>
+        <pointsize>18</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>Select Colors</string>
@@ -1781,11 +2161,17 @@
      <widget class="QPushButton" name="pushButton_2">
       <property name="geometry">
        <rect>
-        <x>860</x>
-        <y>40</y>
-        <width>113</width>
-        <height>41</height>
+        <x>850</x>
+        <y>230</y>
+        <width>141</width>
+        <height>61</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>SF Pro Display</family>
+        <pointsize>18</pointsize>
+       </font>
       </property>
       <property name="text">
        <string>Themes</string>

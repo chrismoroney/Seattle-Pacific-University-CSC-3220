@@ -105,7 +105,7 @@ void connect4App::play(int columnNumber){
     space->setText("");
     space->setStyleSheet(stylesheet);
 
-    QString nextPlayer = numClicks % 2 == 0 ? "Go " + name2 : "Go " + name1;
+    QString nextPlayer = numClicks % 2 == 0 ? name2 + "'s turn" : name1 + "'s turn";
     ui->player_label->setText(nextPlayer);
 
     lastRows[columnNumber - 1] = lastRow + 1;
@@ -144,14 +144,14 @@ bool connect4App::check(int firstColumn, int firstRow, int horizontalMove, int v
     if (numClicks % 2 == 0)
     {
         QMessageBox message;
-        message.setText(name1 + ", you won! \n\nCONGRADULATIONS!!!");
+        message.setText(name1 + " is the winner! \n\nCONGRATULATIONS!");
         message.exec();
         close();
         return true;
     } else
     {
         QMessageBox message;
-        message.setText(name2 + ", you won! \n\nCONGRADULATIONS!!!");
+        message.setText(name2 + " is the winner! \n\nCONGRADULATIONS!!!");
         message.exec();
         close();
         return true;
@@ -267,7 +267,7 @@ void connect4App::on_nextButton_3_clicked()
 void connect4App::on_redButton_clicked()
 {
     ui->currentCol->setStyleSheet("QLabel {background-color: rgb(252, 66, 66); color: rgb(214, 205, 24)}");
-    ui->currentCol->setText("RED");
+    ui->currentCol->setText("Red");
     selectedColor1 = red;
     textColor = gold;
 }
@@ -275,7 +275,7 @@ void connect4App::on_redButton_clicked()
 void connect4App::on_greenButton_clicked()
 {
     ui->currentCol->setStyleSheet("QLabel {background-color: rgb(120, 255, 156); color: rgb(128, 13, 112)}");
-    ui->currentCol->setText("GREEN");
+    ui->currentCol->setText("Green");
     selectedColor1 = green;
     textColor = darkMagenta;
 }
@@ -283,7 +283,7 @@ void connect4App::on_greenButton_clicked()
 void connect4App::on_cyanButton_clicked()
 {
     ui->currentCol->setStyleSheet("QLabel {background-color: rgb(33, 255, 251); color: rgb(214, 205, 24)}");
-    ui->currentCol->setText("CYAN");
+    ui->currentCol->setText("Cyan");
     selectedColor1 = cyan;
     textColor = gold;
 }
@@ -291,7 +291,7 @@ void connect4App::on_cyanButton_clicked()
 void connect4App::on_blueButton_clicked()
 {
     ui->currentCol->setStyleSheet("QLabel {background-color: rgb(33, 151, 255); color: rgb(252, 255, 51)}");
-    ui->currentCol->setText("BLUE");
+    ui->currentCol->setText("Blue");
     selectedColor1 = blue;
     textColor = yellow;
 }
@@ -299,7 +299,7 @@ void connect4App::on_blueButton_clicked()
 void connect4App::on_magentaButton_clicked()
 {
     ui->currentCol->setStyleSheet("QLabel {background-color: rgb(255, 51, 245); color: rgb(34, 107, 17)}");
-    ui->currentCol->setText("MAGENTA");
+    ui->currentCol->setText("Magenta");
     selectedColor1 = magenta;
     textColor = darkGreen;
 }
@@ -307,7 +307,7 @@ void connect4App::on_magentaButton_clicked()
 void connect4App::on_yellowButton_clicked()
 {
     ui->currentCol->setStyleSheet("QLabel {background-color: rgb(252, 255, 51); color: rgb(33, 151, 255)}");
-    ui->currentCol->setText("YELLOW");
+    ui->currentCol->setText("Yellow");
     selectedColor1 = yellow;
     textColor = blue;
 }
@@ -315,7 +315,7 @@ void connect4App::on_yellowButton_clicked()
 void connect4App::on_whiteButton_clicked()
 {
     ui->currentCol->setStyleSheet("QLabel {background-color: rgb(255, 255, 255); color: rgb(0, 0, 0)}");
-    ui->currentCol->setText("WHITE");
+    ui->currentCol->setText("White");
     selectedColor1 = white;
     textColor = black;
 }
@@ -323,7 +323,7 @@ void connect4App::on_whiteButton_clicked()
 void connect4App::on_blackButton_clicked()
 {
     ui->currentCol->setStyleSheet("QLabel {background-color: rgb(0, 0, 0); color: rgb(255, 255, 255)}");
-    ui->currentCol->setText("BLACK");
+    ui->currentCol->setText("Black");
     selectedColor1 = black;
     textColor = white;
 }
@@ -331,7 +331,7 @@ void connect4App::on_blackButton_clicked()
 void connect4App::on_goldButton_clicked()
 {
     ui->currentCol->setStyleSheet("QLabel {background-color: rgb(214, 205, 24); color: rgb(33, 255, 251)}");
-    ui->currentCol->setText("GOLD");
+    ui->currentCol->setText("Gold");
     selectedColor1 = gold;
     textColor = cyan;
 }
@@ -339,7 +339,7 @@ void connect4App::on_goldButton_clicked()
 void connect4App::on_maroonButton_clicked()
 {
     ui->currentCol->setStyleSheet("QLabel {background-color: rgb(153, 24, 24); color: rgb(214, 205, 24)}");
-    ui->currentCol->setText("MAROON");
+    ui->currentCol->setText("Maroon");
     selectedColor1 = maroon;
     textColor = gold;
 }
@@ -347,7 +347,7 @@ void connect4App::on_maroonButton_clicked()
 void connect4App::on_darkGreenButton_clicked()
 {
     ui->currentCol->setStyleSheet("QLabel {background-color: rgb(34, 107, 17); color: rgb(255, 51, 245)}");
-    ui->currentCol->setText("DARK GREEN");
+    ui->currentCol->setText("Dark Green");
     selectedColor1 = darkGreen;
     textColor = magenta;
 }
@@ -355,7 +355,7 @@ void connect4App::on_darkGreenButton_clicked()
 void connect4App::on_darkMagButton_clicked()
 {
     ui->currentCol->setStyleSheet("QLabel {background-color: rgb(128, 13, 112); color: rgb(120, 255, 156)}");
-    ui->currentCol->setText("DARK MAGENTA");
+    ui->currentCol->setText("Dark Magenta");
     selectedColor1 = darkMagenta;
     textColor = green;
 }
@@ -363,7 +363,7 @@ void connect4App::on_darkMagButton_clicked()
 void connect4App::on_redButton_2_clicked()
 {
     ui->currentCol_2->setStyleSheet("QLabel {background-color: rgb(252, 66, 66); color: rgb(214, 205, 24)}");
-    ui->currentCol_2->setText("RED");
+    ui->currentCol_2->setText("Red");
     selectedColor2 = red;
     textColor = gold;
 }
@@ -371,7 +371,7 @@ void connect4App::on_redButton_2_clicked()
 void connect4App::on_greenButton_2_clicked()
 {
     ui->currentCol_2->setStyleSheet("QLabel {background-color: rgb(120, 255, 156); color: rgb(128, 13, 112)}");
-    ui->currentCol_2->setText("GREEN");
+    ui->currentCol_2->setText("Green");
     selectedColor2 = green;
     textColor = darkMagenta;
 }
@@ -379,7 +379,7 @@ void connect4App::on_greenButton_2_clicked()
 void connect4App::on_cyanButton_2_clicked()
 {
     ui->currentCol_2->setStyleSheet("QLabel {background-color: rgb(33, 255, 251); color: rgb(214, 205, 24)}");
-    ui->currentCol_2->setText("CYAN");
+    ui->currentCol_2->setText("Cyan");
     selectedColor2 = cyan;
     textColor = gold;
 }
@@ -387,7 +387,7 @@ void connect4App::on_cyanButton_2_clicked()
 void connect4App::on_blueButton_2_clicked()
 {
     ui->currentCol_2->setStyleSheet("QLabel {background-color: rgb(33, 151, 255); color: rgb(252, 255, 51)}");
-    ui->currentCol_2->setText("BLUE");
+    ui->currentCol_2->setText("Blue");
     selectedColor2 = blue;
     textColor = yellow;
 }
@@ -395,7 +395,7 @@ void connect4App::on_blueButton_2_clicked()
 void connect4App::on_magentaButton_2_clicked()
 {
     ui->currentCol_2->setStyleSheet("QLabel {background-color: rgb(255, 51, 245); color: rgb(34, 107, 17)}");
-    ui->currentCol_2->setText("MAGENTA");
+    ui->currentCol_2->setText("Magenta");
     selectedColor2 = magenta;
     textColor = darkGreen;
 }
@@ -403,7 +403,7 @@ void connect4App::on_magentaButton_2_clicked()
 void connect4App::on_yellowButton_2_clicked()
 {
     ui->currentCol_2->setStyleSheet("QLabel {background-color: rgb(252, 255, 51); color: rgb(33, 151, 255)}");
-    ui->currentCol_2->setText("YELLOW");
+    ui->currentCol_2->setText("Yellow");
     selectedColor2 = yellow;
     textColor = blue;
 }
@@ -411,7 +411,7 @@ void connect4App::on_yellowButton_2_clicked()
 void connect4App::on_whiteButton_2_clicked()
 {
     ui->currentCol_2->setStyleSheet("QLabel {background-color: rgb(255, 255, 255); color: rgb(0, 0, 0)}");
-    ui->currentCol_2->setText("WHITE");
+    ui->currentCol_2->setText("White");
     selectedColor2 = white;
     textColor = black;
 }
@@ -419,7 +419,7 @@ void connect4App::on_whiteButton_2_clicked()
 void connect4App::on_blackButton_2_clicked()
 {
     ui->currentCol_2->setStyleSheet("QLabel {background-color: rgb(0, 0, 0); color: rgb(255, 255, 255)}");
-    ui->currentCol_2->setText("BLACK");
+    ui->currentCol_2->setText("Black");
     selectedColor2 = black;
     textColor = white;
 }
@@ -427,7 +427,7 @@ void connect4App::on_blackButton_2_clicked()
 void connect4App::on_goldButton_2_clicked()
 {
     ui->currentCol_2->setStyleSheet("QLabel {background-color: rgb(214, 205, 24); color: rgb(33, 255, 251)}");
-    ui->currentCol_2->setText("GOLD");
+    ui->currentCol_2->setText("Gold");
     selectedColor2 = gold;
     textColor = cyan;
 }
@@ -435,7 +435,7 @@ void connect4App::on_goldButton_2_clicked()
 void connect4App::on_maroonButton_2_clicked()
 {
     ui->currentCol_2->setStyleSheet("QLabel {background-color: rgb(153, 24, 24); color: rgb(214, 205, 24)}");
-    ui->currentCol_2->setText("MAROON");
+    ui->currentCol_2->setText("Maroon");
     selectedColor2 = maroon;
     textColor = gold;
 }
@@ -443,7 +443,7 @@ void connect4App::on_maroonButton_2_clicked()
 void connect4App::on_darkGreenButton_2_clicked()
 {
     ui->currentCol_2->setStyleSheet("QLabel {background-color: rgb(34, 107, 17); color: rgb(255, 51, 245)}");
-    ui->currentCol_2->setText("DARK GREEN");
+    ui->currentCol_2->setText("Dark Green");
     selectedColor2 = darkGreen;
     textColor = magenta;
 }
@@ -451,7 +451,7 @@ void connect4App::on_darkGreenButton_2_clicked()
 void connect4App::on_darkMagButton_2_clicked()
 {
     ui->currentCol_2->setStyleSheet("QLabel {background-color: rgb(128, 13, 112); color: rgb(120, 255, 156)}");
-    ui->currentCol_2->setText("DARK MAGENTA");
+    ui->currentCol_2->setText("Dark Magenta");
     selectedColor2 = darkMagenta;
     textColor = green;
 }
@@ -459,7 +459,7 @@ void connect4App::on_darkMagButton_2_clicked()
 void connect4App::on_name1Button_clicked()
 {
     numClicks = -1;
-    ui->player_label->setText("Go " + name1);
+    ui->player_label->setText(name1 + "'s turn");
     ui->currentPickFirst->setText(name1);
     ui->currentPickFirst->setStyleSheet("background-color: #" + QString::number(selectedColor1.rgb(), 16) + "; " + "color: #" + QString::number(selectedTextColor1.rgb(), 16));
 }
@@ -467,7 +467,7 @@ void connect4App::on_name1Button_clicked()
 void connect4App::on_name2Button_clicked()
 {
     numClicks = 0;
-    ui->player_label->setText("Go " + name2);
+    ui->player_label->setText(name2 + "'s turn");
     ui->currentPickFirst->setText(name2);
     ui->currentPickFirst->setStyleSheet("background-color: #" + QString::number(selectedColor2.rgb(), 16) + "; " + "color: #" + QString::number(selectedTextColor2.rgb(), 16));
 }

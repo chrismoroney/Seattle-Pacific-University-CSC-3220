@@ -222,6 +222,7 @@ DIST          = ../../../../Qt/5.12.6/clang_64/mkspecs/features/spec_pre.prf \
 		../../../../Qt/5.12.6/clang_64/mkspecs/features/qt_config.prf \
 		../../../../Qt/5.12.6/clang_64/mkspecs/macx-clang/qmake.conf \
 		../../../../Qt/5.12.6/clang_64/mkspecs/features/spec_post.prf \
+		../Connect4App/.qmake.stash \
 		../../../../Qt/5.12.6/clang_64/mkspecs/features/exclusive_builds.prf \
 		../../../../Qt/5.12.6/clang_64/mkspecs/features/mac/sdk.prf \
 		../../../../Qt/5.12.6/clang_64/mkspecs/features/toolchain.prf \
@@ -438,6 +439,7 @@ Makefile: ../Connect4App/connect4App.pro ../../../../Qt/5.12.6/clang_64/mkspecs/
 		../../../../Qt/5.12.6/clang_64/mkspecs/features/qt_config.prf \
 		../../../../Qt/5.12.6/clang_64/mkspecs/macx-clang/qmake.conf \
 		../../../../Qt/5.12.6/clang_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		../../../../Qt/5.12.6/clang_64/mkspecs/features/exclusive_builds.prf \
 		../../../../Qt/5.12.6/clang_64/mkspecs/features/mac/sdk.prf \
 		../../../../Qt/5.12.6/clang_64/mkspecs/features/toolchain.prf \
@@ -635,6 +637,7 @@ Makefile: ../Connect4App/connect4App.pro ../../../../Qt/5.12.6/clang_64/mkspecs/
 ../../../../Qt/5.12.6/clang_64/mkspecs/features/qt_config.prf:
 ../../../../Qt/5.12.6/clang_64/mkspecs/macx-clang/qmake.conf:
 ../../../../Qt/5.12.6/clang_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 ../../../../Qt/5.12.6/clang_64/mkspecs/features/exclusive_builds.prf:
 ../../../../Qt/5.12.6/clang_64/mkspecs/features/mac/sdk.prf:
 ../../../../Qt/5.12.6/clang_64/mkspecs/features/toolchain.prf:
@@ -708,6 +711,7 @@ clean: compiler_clean
 
 distclean: clean 
 	-$(DEL_FILE) -r connect4App.app
+	-$(DEL_FILE) .qmake.stash
 	-$(DEL_FILE) Makefile
 
 
@@ -738,6 +742,10 @@ compiler_moc_header_clean:
 moc_connect4app.cpp: ../Connect4App/connect4app.h \
 		../../../../Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QMainWindow \
 		../../../../Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qmainwindow.h \
+		../../../../Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QLabel \
+		../../../../Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qlabel.h \
+		../../../../Qt/5.12.6/clang_64/lib/QtGui.framework/Headers/QList \
+		../../../../Qt/5.12.6/clang_64/lib/QtGui.framework/Headers/qevent.h \
 		moc_predefs.h \
 		../../../../Qt/5.12.6/clang_64/bin/moc
 	/Users/chrismoroney/Qt/5.12.6/clang_64/bin/moc $(DEFINES) --include /Users/chrismoroney/Documents/GitHub/Seattle-Pacific-University-CSC-3220/build-connect4App-Desktop_Qt_5_12_6_clang_64bit-Debug/moc_predefs.h -I/Users/chrismoroney/Qt/5.12.6/clang_64/mkspecs/macx-clang -I/Users/chrismoroney/Documents/GitHub/Seattle-Pacific-University-CSC-3220/Connect4App -I/Users/chrismoroney/Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers -I/Users/chrismoroney/Qt/5.12.6/clang_64/lib/QtGui.framework/Headers -I/Users/chrismoroney/Qt/5.12.6/clang_64/lib/QtCore.framework/Headers -I. -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include/c++/v1 -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/include -F/Users/chrismoroney/Qt/5.12.6/clang_64/lib ../Connect4App/connect4app.h -o moc_connect4app.cpp
@@ -768,6 +776,10 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean compiler_ui
 main.o: ../Connect4App/main.cpp ../Connect4App/connect4app.h \
 		../../../../Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QMainWindow \
 		../../../../Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qmainwindow.h \
+		../../../../Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QLabel \
+		../../../../Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qlabel.h \
+		../../../../Qt/5.12.6/clang_64/lib/QtGui.framework/Headers/QList \
+		../../../../Qt/5.12.6/clang_64/lib/QtGui.framework/Headers/qevent.h \
 		../../../../Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QApplication \
 		../../../../Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qapplication.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../Connect4App/main.cpp
@@ -775,9 +787,15 @@ main.o: ../Connect4App/main.cpp ../Connect4App/connect4app.h \
 connect4app.o: ../Connect4App/connect4app.cpp ../Connect4App/connect4app.h \
 		../../../../Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QMainWindow \
 		../../../../Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qmainwindow.h \
-		ui_connect4app.h \
+		../../../../Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QLabel \
+		../../../../Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qlabel.h \
+		../../../../Qt/5.12.6/clang_64/lib/QtGui.framework/Headers/QList \
+		../../../../Qt/5.12.6/clang_64/lib/QtGui.framework/Headers/qevent.h \
+		../Connect4App/ui_connect4app.h \
 		../../../../Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/QMessageBox \
-		../../../../Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qmessagebox.h
+		../../../../Qt/5.12.6/clang_64/lib/QtWidgets.framework/Headers/qmessagebox.h \
+		../../../../Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/QDebug \
+		../../../../Qt/5.12.6/clang_64/lib/QtCore.framework/Headers/qdebug.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o connect4app.o ../Connect4App/connect4app.cpp
 
 moc_connect4app.o: moc_connect4app.cpp 
