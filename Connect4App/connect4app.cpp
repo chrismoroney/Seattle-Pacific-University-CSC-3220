@@ -10,7 +10,13 @@ connect4App::connect4App(QWidget *parent)
     , ui(new Ui::connect4App)
 {
     ui->setupUi(this);
+    ui->themeSelection->setStyleSheet("background-color: white");
+    ui->playerInfoFrame1->setStyleSheet("background-color: white");
+    ui->playerInfoFrame2->setStyleSheet("background-color: white");
+
     ui->stackedWidget->setCurrentIndex(0);
+    ui->enteredName->setStyleSheet("background-color: white");
+    ui->enteredName_2->setStyleSheet("background-color: white");
 
     red = QColor(252, 66, 66);
     green = QColor(120, 255, 156);
@@ -24,6 +30,13 @@ connect4App::connect4App(QWidget *parent)
     maroon = QColor(153, 24, 24);
     darkGreen = QColor(34, 107, 17);
     darkMagenta = QColor(128, 13, 112);
+
+    ui->spuMaroonTheme->setStyleSheet("background-color: rgb(122, 23, 28); color: rgb(255, 255, 255)");
+    ui->spuWhiteTheme->setStyleSheet("background-color: rgb(255, 255, 255); color: rgb(122, 23, 28)");
+    ui->arcticTheme->setStyleSheet("background-color: rgb(148, 199, 214); color: rgb(147, 125, 232);");
+    ui->stPatricksTheme->setStyleSheet("background-color: rgb(214, 204, 17); color: rgb(114, 179, 95);");
+    ui->valentinesDayTheme->setStyleSheet("background-color: rgb(115, 40, 50); color: rgb(242, 104, 212);");
+    ui->halloweenTheme->setStyleSheet("background-color: rgb(0, 0, 0); color: rgb(252, 147, 0)");
 
     ui->redButton->setStyleSheet("background-color: rgb(252, 66, 66); color: rgb(214, 205, 24)");
     ui->greenButton->setStyleSheet("background-color: rgb(120, 255, 156); color: rgb(128, 13, 112)");
@@ -148,13 +161,16 @@ bool connect4App::check(int firstColumn, int firstRow, int horizontalMove, int v
         message.exec();
         close();
         return true;
-    } else
+
+    }
+    else
     {
         QMessageBox message;
         message.setText(name2 + " is the winner! \n\nCONGRADULATIONS!!!");
         message.exec();
         close();
         return true;
+
     }
 
 }
@@ -214,7 +230,7 @@ void connect4App::on_nextButton_clicked()
 {
     if (ui->currentCol->text() != "None")
     {
-        ui->stackedWidget->setCurrentIndex(1);
+        ui->stackedWidget->setCurrentIndex(2);
     }
     else
     {
@@ -238,7 +254,7 @@ void connect4App::on_nextButton_2_clicked()
 {
     if (ui->currentCol_2->text() != "None")
     {
-        ui->stackedWidget->setCurrentIndex(2);
+        ui->stackedWidget->setCurrentIndex(3);
     }
     else
     {
@@ -261,7 +277,7 @@ void connect4App::on_nextButton_2_clicked()
 
 void connect4App::on_nextButton_3_clicked()
 {
-    ui->stackedWidget->setCurrentIndex(3);
+    ui->stackedWidget->setCurrentIndex(4);
 }
 
 void connect4App::on_redButton_clicked()
@@ -470,4 +486,241 @@ void connect4App::on_name2Button_clicked()
     ui->player_label->setText(name2 + "'s turn");
     ui->currentPickFirst->setText(name2);
     ui->currentPickFirst->setStyleSheet("background-color: #" + QString::number(selectedColor2.rgb(), 16) + "; " + "color: #" + QString::number(selectedTextColor2.rgb(), 16));
+}
+
+void connect4App::on_spuMaroonTheme_clicked()
+{
+    this->setStyleSheet("background-color: rgb(122, 23, 28);");
+    ui->stackedWidget->setStyleSheet("background-color: rgb(122, 23, 28);");
+    ui->themeSelectFrame->setStyleSheet("background-color: rgb(255, 255, 255)");
+    ui->currentTheme->setText("SPU-Maroon");
+    ui->currentTheme->setStyleSheet("background-color: rgb(122, 23, 28); color: rgb(255, 255, 255)");
+    ui->themeChoiceLabel->setStyleSheet("color: rgb(0, 0, 0)");
+    ui->selectedThemeLabel->setStyleSheet("color: rgb(0, 0, 0)");
+    ui->nextButtontoChars->setStyleSheet("background-color: rgb(122, 23, 28); color: rgb(255, 255, 255)");
+    ui->playerInfoFrame1->setStyleSheet("background-color: rgb(255, 255, 255)");
+    ui->playerInfoFrame2->setStyleSheet("background-color: rgb(255, 255, 255)");
+    ui->playerGoFirst->setStyleSheet("background-color: rgb(255, 255, 255)");
+    ui->gameFrame->setStyleSheet("background-color: rgb(255, 255, 255)");
+    ui->firstColButton->setStyleSheet("background-color: rgb(255, 255, 255); color: rgb(122, 23, 28)");
+    ui->secondColButton->setStyleSheet("background-color: rgb(255, 255, 255); color: rgb(122, 23, 28)");
+    ui->thirdColButton->setStyleSheet("background-color: rgb(255, 255, 255); color: rgb(122, 23, 28)");
+    ui->fourthColButton->setStyleSheet("background-color: rgb(255, 255, 255); color: rgb(122, 23, 28)");
+    ui->fifthColButton->setStyleSheet("background-color: rgb(255, 255, 255); color: rgb(122, 23, 28)");
+    ui->sixthButtonCol->setStyleSheet("background-color: rgb(255, 255, 255); color: rgb(122, 23, 28)");
+    ui->seventhColButton->setStyleSheet("background-color: rgb(255, 255, 255); color: rgb(122, 23, 28)");
+    ui->player_label->setStyleSheet("color: rgb(255, 255, 255)");
+    ui->nextButton->setStyleSheet("background-color: rgb(122, 23, 28); color: rgb(255, 255, 255)");
+    ui->nextButton_2->setStyleSheet("background-color: rgb(122, 23, 28); color: rgb(255, 255, 255)");
+    ui->nextButton_3->setStyleSheet("background-color: rgb(122, 23, 28); color: rgb(255, 255, 255)");
+    ui->goToThemesButton->setStyleSheet("background-color: rgb(255, 255, 255); color: rgb(122, 23, 28)");
+    ui->instructionsButton->setStyleSheet("background-color: rgb(255, 255, 255); color: rgb(122, 23, 28)");
+}
+
+void connect4App::on_spuWhiteTheme_clicked()
+{
+    this->setStyleSheet("background-color: rgb(255, 255, 255);");
+    ui->stackedWidget->setStyleSheet("background-color: rgb(255, 255, 255);");
+    ui->themeSelectFrame->setStyleSheet("background-color: rgb(122, 23, 28)");
+    ui->currentTheme->setText("SPU-White");
+    ui->currentTheme->setStyleSheet("background-color: rgb(255, 255, 255); color: rgb(122, 23, 28)");
+    ui->themeChoiceLabel->setStyleSheet("color: rgb(255, 255, 255)");
+    ui->selectedThemeLabel->setStyleSheet("color: rgb(255, 255, 255)");
+    ui->nextButtontoChars->setStyleSheet("background-color: rgb(255, 255, 255); color: rgb(122, 23, 28)");
+    ui->playerInfoFrame1->setStyleSheet("background-color: rgb(122, 23, 28)");
+    ui->playerInfoFrame2->setStyleSheet("background-color: rgb(122, 23, 28)");
+    ui->playerGoFirst->setStyleSheet("background-color: rgb(122, 23, 28)");
+    ui->gameFrame->setStyleSheet("background-color: rgb(122, 23, 28)");
+    ui->nameLabel->setStyleSheet("color:rgb(255, 255, 255)");
+    ui->colorLabel->setStyleSheet("color:rgb(255, 255, 255)");
+    ui->currentColLabel_2->setStyleSheet("color:rgb(255, 255, 255)");
+    ui->currentCol->setStyleSheet("color: rgb(255, 255, 255)");
+    ui->nextButton->setStyleSheet("background-color: rgb(255, 255, 255)");
+    ui->nameLabel_2->setStyleSheet("color:rgb(255, 255, 255)");
+    ui->colorLabel_2->setStyleSheet("color:rgb(255, 255, 255)");
+    ui->currentColLabel->setStyleSheet("color:rgb(255, 255, 255)");
+    ui->currentCol_2->setStyleSheet("color: rgb(255, 255, 255)");
+    ui->nextButton_2->setStyleSheet("background-color: rgb(255, 255, 255)");
+    ui->selectedLabel->setStyleSheet("color: rgb(255, 255, 255)");
+    ui->firstLabel->setStyleSheet("color: rgb(255, 255, 255)");
+    ui->selectedLabel->setStyleSheet("color: rgb(255, 255, 255)");
+    ui->nextButton->setStyleSheet("background-color: rgb(255, 255, 255); color: rgb(122, 23, 28);");
+    ui->nextButton_3->setStyleSheet("background-color: rgb(255, 255, 255); color: rgb(122, 23, 28);");
+    ui->firstColButton->setStyleSheet("background-color: rgb(122, 23, 28); color: rgb(255, 255, 255)");
+    ui->secondColButton->setStyleSheet("background-color: rgb(122, 23, 28); color: rgb(255, 255, 255)");
+    ui->thirdColButton->setStyleSheet("background-color: rgb(122, 23, 28); color: rgb(255, 255, 255)");
+    ui->fourthColButton->setStyleSheet("background-color: rgb(122, 23, 28); color: rgb(255, 255, 255)");
+    ui->fifthColButton->setStyleSheet("background-color: rgb(122, 23, 28); color: rgb(255, 255, 255)");
+    ui->sixthButtonCol->setStyleSheet("background-color: rgb(122, 23, 28); color: rgb(255, 255, 255)");
+    ui->seventhColButton->setStyleSheet("background-color: rgb(122, 23, 28); color: rgb(255, 255, 255)");
+    ui->player_label->setStyleSheet("color: rgb(0, 0, 0)");
+    ui->goToThemesButton->setStyleSheet("background-color: rgb(122, 23, 28); color: rgb(255, 255, 255)");
+    ui->instructionsButton->setStyleSheet("background-color: rgb(122, 23, 28); color: rgb(255, 255, 255)");
+}
+
+
+void connect4App::on_arcticTheme_clicked()
+{
+    this->setStyleSheet("background-color: rgb(148, 199, 214);");
+    ui->stackedWidget->setStyleSheet("background-color: rgb(148, 199, 214);");
+    ui->themeSelectFrame->setStyleSheet("background-color: rgb(147, 125, 232)");
+    ui->currentTheme->setText("Arctic");
+    ui->currentTheme->setStyleSheet("background-color: rgb(148, 199, 214); color: rgb(147, 125, 232);");
+    ui->themeChoiceLabel->setStyleSheet("color: rgb(0, 0, 0)");
+    ui->selectedThemeLabel->setStyleSheet("color: rgb(0, 0, 0)");
+    ui->nextButtontoChars->setStyleSheet("background-color: rgb(148, 199, 214); color: rgb(147, 125, 232)");
+    ui->playerInfoFrame1->setStyleSheet("background-color: rgb(147, 125, 232)");
+    ui->playerInfoFrame2->setStyleSheet("background-color: rgb(147, 125, 232)");
+    ui->playerGoFirst->setStyleSheet("background-color: rgb(147, 125, 232)");
+    ui->gameFrame->setStyleSheet("background-color: rgb(147, 125, 232)");
+    ui->firstColButton->setStyleSheet("background-color: rgb(147, 125, 232)");
+    ui->secondColButton->setStyleSheet("background-color: rgb(147, 125, 232)");
+    ui->thirdColButton->setStyleSheet("background-color: rgb(147, 125, 232)");
+    ui->fourthColButton->setStyleSheet("background-color: rgb(147, 125, 232)");
+    ui->fifthColButton->setStyleSheet("background-color: rgb(147, 125, 232)");
+    ui->sixthButtonCol->setStyleSheet("background-color: rgb(147, 125, 232)");
+    ui->seventhColButton->setStyleSheet("background-color: rgb(147, 125, 232)");
+    ui->nextButton->setStyleSheet("background-color: rgb(148, 199, 214); color: rgb(147, 125, 232)");
+    ui->nextButton_2->setStyleSheet("background-color: rgb(148, 199, 214); color: rgb(147, 125, 232)");
+    ui->nextButton_3->setStyleSheet("background-color: rgb(148, 199, 214); color: rgb(147, 125, 232)");
+    ui->player_label->setStyleSheet("color: rgb(0, 0, 0)");
+    ui->goToThemesButton->setStyleSheet("background-color: rgb(147, 125, 232); color: rgb(148, 199, 214)");
+    ui->instructionsButton->setStyleSheet("background-color: rgb(147, 125, 232); color: rgb(148, 199, 214)");
+}
+void connect4App::on_stPatricksTheme_clicked()
+{
+    this->setStyleSheet("background-color: rgb(214, 204, 17); ");
+    ui->stackedWidget->setStyleSheet("background-color: rgb(214, 204, 17);");
+    ui->themeSelectFrame->setStyleSheet("background-color: rgb(114, 179, 95)");
+    ui->currentTheme->setText("St. Patrick's Day");
+    ui->currentTheme->setStyleSheet("background-color: rgb(214, 204, 17); color: rgb(114, 179, 95);");
+    ui->themeChoiceLabel->setStyleSheet("color: rgb(0, 0, 0)");
+    ui->selectedThemeLabel->setStyleSheet("color: rgb(0, 0, 0)");
+    ui->nextButtontoChars->setStyleSheet("background-color: rgb(214, 204, 17); color: rgb(114, 179, 95);");
+    ui->playerInfoFrame1->setStyleSheet("background-color: rgb(114, 179, 95)");
+    ui->playerInfoFrame2->setStyleSheet("background-color: rgb(114, 179, 95)");
+    ui->playerGoFirst->setStyleSheet("background-color: rgb(114, 179, 95)");
+    ui->gameFrame->setStyleSheet("background-color: rgb(114, 179, 95)");
+    ui->firstColButton->setStyleSheet("background-color: rgb(114, 179, 95)");
+    ui->secondColButton->setStyleSheet("background-color: rgb(114, 179, 95)");
+    ui->thirdColButton->setStyleSheet("background-color: rgb(114, 179, 95)");
+    ui->fourthColButton->setStyleSheet("background-color: rgb(114, 179, 95)");
+    ui->fifthColButton->setStyleSheet("background-color: rgb(114, 179, 95)");
+    ui->sixthButtonCol->setStyleSheet("background-color: rgb(114, 179, 95)");
+    ui->seventhColButton->setStyleSheet("background-color: rgb(114, 179, 95)");
+    ui->nextButton->setStyleSheet("background-color: rgb(214, 204, 17); color: rgb(114, 179, 95);");
+    ui->nextButton_2->setStyleSheet("background-color: rgb(214, 204, 17); color: rgb(114, 179, 95);");
+    ui->nextButton_3->setStyleSheet("background-color: rgb(214, 204, 17); color: rgb(114, 179, 95);");
+    ui->player_label->setStyleSheet("color: rgb(0, 0, 0)");
+    ui->goToThemesButton->setStyleSheet("background-color: rgb(114, 179, 95); color: rgb(214, 204, 17);");
+    ui->instructionsButton->setStyleSheet("background-color: rgb(114, 179, 95); color: rgb(214, 204, 17);");
+}
+
+void connect4App::on_valentinesDayTheme_clicked()
+{
+    this->setStyleSheet("background-color: rgb(115, 40, 50); ");
+    ui->stackedWidget->setStyleSheet("background-color: rgb(115, 40, 50);");
+    ui->themeSelectFrame->setStyleSheet("background-color: rgb(242, 104, 212)");
+    ui->currentTheme->setText("Valentine's Day");
+    ui->currentTheme->setStyleSheet("background-color: rgb(115, 40, 50); color: rgb(242, 104, 212);");
+    ui->themeChoiceLabel->setStyleSheet("color: rgb(0, 0, 0)");
+    ui->selectedThemeLabel->setStyleSheet("color: rgb(0, 0, 0)");
+    ui->nextButtontoChars->setStyleSheet("background-color: rgb(115, 40, 50); color: rgb(242, 104, 212);");
+    ui->playerInfoFrame1->setStyleSheet("background-color: rgb(242, 104, 212)");
+    ui->playerInfoFrame2->setStyleSheet("background-color: rgb(242, 104, 212)");
+    ui->playerGoFirst->setStyleSheet("background-color: rgb(242, 104, 212)");
+    ui->gameFrame->setStyleSheet("background-color: rgb(242, 104, 212)");
+    ui->firstColButton->setStyleSheet("background-color: rgb(242, 104, 212)");
+    ui->secondColButton->setStyleSheet("background-color: rgb(242, 104, 212)");
+    ui->thirdColButton->setStyleSheet("background-color: rgb(242, 104, 212)");
+    ui->fourthColButton->setStyleSheet("background-color: rgb(242, 104, 212)");
+    ui->fifthColButton->setStyleSheet("background-color: rgb(242, 104, 212)");
+    ui->sixthButtonCol->setStyleSheet("background-color: rgb(242, 104, 212)");
+    ui->seventhColButton->setStyleSheet("background-color: rgb(242, 104, 212)");
+    ui->nextButton->setStyleSheet("background-color: rgb(115, 40, 50); color: rgb(242, 104, 212);");
+    ui->nextButton_2->setStyleSheet("background-color: rgb(115, 40, 50); color: rgb(242, 104, 212);");
+    ui->nextButton_3->setStyleSheet("background-color: rgb(115, 40, 50); color: rgb(242, 104, 212);");
+    ui->player_label->setStyleSheet("color: rgb(0, 0, 0)");
+    ui->goToThemesButton->setStyleSheet("background-color: rgb(242, 104, 212); color: rgb(115, 40, 50);");
+    ui->instructionsButton->setStyleSheet("background-color: rgb(242, 104, 212); color: rgb(115, 40, 50);");
+}
+
+void connect4App::on_halloweenTheme_clicked()
+{
+    this->setStyleSheet("background-color: rgb(0, 0, 0); ");
+    ui->stackedWidget->setStyleSheet("background-color: rgb(0, 0, 0);");
+    ui->themeSelectFrame->setStyleSheet("background-color: rgb(252, 147, 0)");
+    ui->currentTheme->setText("Halloween");
+    ui->currentTheme->setStyleSheet("background-color: rgb(0, 0, 0); color: rgb(252, 147, 0);");
+    ui->themeChoiceLabel->setStyleSheet("color: rgb(0, 0, 0)");
+    ui->selectedThemeLabel->setStyleSheet("color: rgb(0, 0, 0)");
+    ui->nextButtontoChars->setStyleSheet("background-color: rgb(0, 0, 0); color: rgb(252, 147, 0);");
+    ui->playerInfoFrame1->setStyleSheet("background-color: rgb(252, 147, 0)");
+    ui->playerInfoFrame2->setStyleSheet("background-color:rgb(252, 147, 0)");
+    ui->playerGoFirst->setStyleSheet("background-color: rgb(252, 147, 0)");
+    ui->gameFrame->setStyleSheet("background-color: rgb(252, 147, 0)");
+    ui->nameLabel->setStyleSheet("color:rgb(0, 0, 0)");
+    ui->colorLabel->setStyleSheet("color:rgb(0, 0, 0)");
+    ui->currentColLabel_2->setStyleSheet("color:rgb(0, 0, 0)");
+    ui->currentCol->setStyleSheet("color: rgb(255, 255, 255)");
+    ui->nextButton->setStyleSheet("background-color: rgb(255, 255, 255)");
+    ui->nameLabel_2->setStyleSheet("color:rgb(0, 0, 0)");
+    ui->colorLabel_2->setStyleSheet("color:rgb(0, 0, 0)");
+    ui->currentColLabel->setStyleSheet("color:rgb(0, 0, 0)");
+    ui->currentCol_2->setStyleSheet("color:rgb(0, 0, 0)");
+    ui->nextButton_2->setStyleSheet("background-color: rgb(255, 255, 255)");
+    ui->selectedLabel->setStyleSheet("color: rgb(255, 255, 255)");
+    ui->firstLabel->setStyleSheet("color:rgb(0, 0, 0)");
+    ui->selectedLabel->setStyleSheet("color:rgb(0, 0, 0)");
+    ui->nextButton->setStyleSheet("background-color: rgb(0, 0, 0); color: rgb(252, 147, 0);");
+    ui->nextButton_2->setStyleSheet("background-color: rgb(0, 0, 0); color: rgb(252, 147, 0);");
+    ui->nextButton_3->setStyleSheet("background-color: rgb(0, 0, 0); color: rgb(252, 147, 0);");
+    ui->firstColButton->setStyleSheet("background-color: rgb(252, 147, 0); color: rgb(0, 0, 0)");
+    ui->secondColButton->setStyleSheet("background-color: rgb(252, 147, 0); color: rgb(0, 0, 0)");
+    ui->thirdColButton->setStyleSheet("background-color: rgb(252, 147, 0); color: rgb(0, 0, 0)");
+    ui->fourthColButton->setStyleSheet("background-color: rgb(252, 147, 0); color: rgb(0, 0, 0)");
+    ui->fifthColButton->setStyleSheet("background-color: rgb(252, 147, 0); color: rgb(0, 0, 0)");
+    ui->sixthButtonCol->setStyleSheet("background-color: rgb(252, 147, 0); color: rgb(0, 0, 0)");
+    ui->seventhColButton->setStyleSheet("background-color: rgb(252, 147, 0); color: rgb(0, 0, 0)");
+    ui->player_label->setStyleSheet("color: rgb(255, 255, 255)");
+    ui->goToThemesButton->setStyleSheet("background-color: rgb(252, 147, 0); color: rgb(0, 0, 0)");
+    ui->instructionsButton->setStyleSheet("background-color: rgb(252, 147, 0); color: rgb(0, 0, 0)");
+}
+
+void connect4App::on_nextButtontoChars_clicked()
+{
+    if (ui->currentTheme->text() == "None")
+    {
+        QMessageBox pickTheme;
+        pickTheme.setText("Please select a theme before moving on.");
+        pickTheme.setWindowTitle("Select Theme");
+        pickTheme.exec();
+    }
+    else
+    {
+        changeNumThemes += 1;
+        if (changeNumThemes == 1)
+        {
+            ui->stackedWidget->setCurrentIndex(1);
+        }
+        else
+        {
+            ui->stackedWidget->setCurrentIndex(4);
+        }
+    }
+}
+
+void connect4App::on_goToThemesButton_clicked()
+{
+    ui->stackedWidget->setCurrentIndex(0);
+}
+
+void connect4App::on_closeButton_clicked()
+{
+    QApplication::quit();
+}
+
+void connect4App::on_actionClose_Application_triggered()
+{
+    QApplication::quit();
 }

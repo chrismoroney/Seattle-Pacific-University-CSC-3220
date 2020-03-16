@@ -92,6 +92,26 @@ private slots:
 
     void on_name2Button_clicked();
 
+    void on_spuMaroonTheme_clicked();
+
+    void on_spuWhiteTheme_clicked();
+
+    void on_arcticTheme_clicked();
+
+    void on_stPatricksTheme_clicked();
+
+    void on_valentinesDayTheme_clicked();
+
+    void on_halloweenTheme_clicked();
+
+    void on_nextButtontoChars_clicked();
+
+    void on_goToThemesButton_clicked();
+
+    void on_closeButton_clicked();
+
+    void on_actionClose_Application_triggered();
+
 private:
     Ui::connect4App *ui;
 
@@ -118,6 +138,10 @@ private:
     QString name2;
 
     int numClicks = -1;
+    int changeNumThemes = 0;
+    int numWinPlayer1 = 0;
+    int numWinPlayer2 = 0;
+
 
     QList<QList<QLabel*>*> spaces;
     QList<int> lastRows;
