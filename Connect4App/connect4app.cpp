@@ -10,6 +10,7 @@ connect4App::connect4App(QWidget *parent)
     , ui(new Ui::connect4App)
 {
     ui->setupUi(this);
+
     ui->themeSelection->setStyleSheet("background-color: white");
     ui->playerInfoFrame1->setStyleSheet("background-color: white");
     ui->playerInfoFrame2->setStyleSheet("background-color: white");
@@ -715,12 +716,3 @@ void connect4App::on_goToThemesButton_clicked()
     ui->stackedWidget->setCurrentIndex(0);
 }
 
-void connect4App::on_closeButton_clicked()
-{
-    QApplication::quit();
-}
-
-void connect4App::on_actionClose_Application_triggered()
-{
-    QApplication::quit();
-}

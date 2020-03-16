@@ -108,9 +108,6 @@ private slots:
 
     void on_goToThemesButton_clicked();
 
-    void on_closeButton_clicked();
-
-    void on_actionClose_Application_triggered();
 
 private:
     Ui::connect4App *ui;
@@ -137,10 +134,9 @@ private:
     QString name1;
     QString name2;
 
+
     int numClicks = -1;
     int changeNumThemes = 0;
-    int numWinPlayer1 = 0;
-    int numWinPlayer2 = 0;
 
 
     QList<QList<QLabel*>*> spaces;
