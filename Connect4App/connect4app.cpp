@@ -513,6 +513,16 @@ void connect4App::on_spuMaroonTheme_clicked()
     ui->nextButton_3->setStyleSheet("background-color: rgb(122, 23, 28); color: rgb(255, 255, 255)");
     ui->goToThemesButton->setStyleSheet("background-color: rgb(255, 255, 255); color: rgb(122, 23, 28)");
     ui->instructionsButton->setStyleSheet("background-color: rgb(255, 255, 255); color: rgb(122, 23, 28)");
+    ui->nameLabel->setStyleSheet("color: rgb(0, 0, 0)");
+    ui->colorLabel->setStyleSheet("color: rgb(0, 0, 0)");
+    ui->currentCol->setStyleSheet("color: rgb(0, 0, 0)");
+    ui->currentColLabel->setStyleSheet("color: rgb(0, 0, 0)");
+    ui->nameLabel_2->setStyleSheet("color: rgb(0, 0, 0)");
+    ui->colorLabel_2->setStyleSheet("color: rgb(0, 0, 0)");
+    ui->currentCol_2->setStyleSheet("color: rgb(0, 0, 0)");
+    ui->currentColLabel_2->setStyleSheet("color: rgb(0, 0, 0)");
+
+
 }
 
 void connect4App::on_spuWhiteTheme_clicked()
@@ -612,6 +622,14 @@ void connect4App::on_stPatricksTheme_clicked()
     ui->player_label->setStyleSheet("color: rgb(0, 0, 0)");
     ui->goToThemesButton->setStyleSheet("background-color: rgb(114, 179, 95); color: rgb(214, 204, 17);");
     ui->instructionsButton->setStyleSheet("background-color: rgb(114, 179, 95); color: rgb(214, 204, 17);");
+    ui->nameLabel->setStyleSheet("color: rgb(0, 0, 0)");
+    ui->colorLabel->setStyleSheet("color: rgb(0, 0, 0)");
+    ui->currentCol->setStyleSheet("color: rgb(0, 0, 0)");
+    ui->currentColLabel->setStyleSheet("color: rgb(0, 0, 0)");
+    ui->nameLabel_2->setStyleSheet("color: rgb(0, 0, 0)");
+    ui->colorLabel_2->setStyleSheet("color: rgb(0, 0, 0)");
+    ui->currentCol_2->setStyleSheet("color: rgb(0, 0, 0)");
+    ui->currentColLabel_2->setStyleSheet("color: rgb(0, 0, 0)");
 }
 
 void connect4App::on_valentinesDayTheme_clicked()
@@ -638,7 +656,7 @@ void connect4App::on_valentinesDayTheme_clicked()
     ui->nextButton->setStyleSheet("background-color: rgb(115, 40, 50); color: rgb(242, 104, 212);");
     ui->nextButton_2->setStyleSheet("background-color: rgb(115, 40, 50); color: rgb(242, 104, 212);");
     ui->nextButton_3->setStyleSheet("background-color: rgb(115, 40, 50); color: rgb(242, 104, 212);");
-    ui->player_label->setStyleSheet("color: rgb(0, 0, 0)");
+    ui->player_label->setStyleSheet("color: rgb(255, 255, 255)");
     ui->goToThemesButton->setStyleSheet("background-color: rgb(242, 104, 212); color: rgb(115, 40, 50);");
     ui->instructionsButton->setStyleSheet("background-color: rgb(242, 104, 212); color: rgb(115, 40, 50);");
 }
