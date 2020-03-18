@@ -109,6 +109,8 @@ private slots:
     void on_goToThemesButton_clicked();
 
 
+    void on_actionClose_Application_3_triggered();
+
 private:
     Ui::connect4App *ui;
 

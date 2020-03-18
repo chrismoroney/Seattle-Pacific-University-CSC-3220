@@ -33,7 +33,7 @@
      <string notr="true"/>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="themeSelection">
      <widget class="QFrame" name="themeSelectFrame">
@@ -2806,6 +2806,7 @@
     <property name="title">
      <string>File</string>
     </property>
+    <addaction name="actionClose_Application_3"/>
    </widget>
    <addaction name="menuFile"/>
   </widget>
@@ -2816,6 +2817,11 @@
    </property>
   </action>
   <action name="actionClose_Application_2">
+   <property name="text">
+    <string>Close Application</string>
+   </property>
+  </action>
+  <action name="actionClose_Application_3">
    <property name="text">
     <string>Close Application</string>
    </property>

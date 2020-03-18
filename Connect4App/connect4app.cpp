@@ -160,7 +160,6 @@ bool connect4App::check(int firstColumn, int firstRow, int horizontalMove, int v
         QMessageBox message;
         message.setText(name1 + " is the winner! \n\nCONGRATULATIONS!");
         message.exec();
-        close();
         return true;
 
     }
@@ -169,9 +168,7 @@ bool connect4App::check(int firstColumn, int firstRow, int horizontalMove, int v
         QMessageBox message;
         message.setText(name2 + " is the winner! \n\nCONGRADULATIONS!!!");
         message.exec();
-        close();
         return true;
-
     }
 
 }
@@ -716,3 +713,8 @@ void connect4App::on_goToThemesButton_clicked()
     ui->stackedWidget->setCurrentIndex(0);
 }
 
+
+void connect4App::on_actionClose_Application_3_triggered()
+{
+    QApplication::quit();
+}
